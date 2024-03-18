@@ -4,6 +4,7 @@ import React from "react";
 import { Hero } from "./hero";
 import { HereForYou } from "./here-for-you";
 import { HealthDatas } from "./health-datas";
+import { FeelView } from "./feel";
 
 export default function HomeContainer() {
   return (
@@ -12,6 +13,7 @@ export default function HomeContainer() {
         <Hero />
         <HereForYou />
         <HealthDatas />
+        <FeelView />
       </Box>
     </PublicLayout>
   );
