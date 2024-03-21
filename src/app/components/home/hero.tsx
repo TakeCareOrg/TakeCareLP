@@ -1,12 +1,37 @@
+"use client";
 import { Translation } from "@/core/i18n/i18n";
 import { Box, Button, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import Image from "next/image";
 import React from "react";
+
+const HeaderStyle = makeStyles((theme: string) => ({
+  header: {
+background: "linear-gradient(to bottom, rgba(52,111,153,1) 0%, rgba(58,132,207,1) 24%, rgba(154,171,236,1) 59%, #7487CF 100%)",
+    height: "100vh",
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    animation: `$gradient 10s infinite alternate`,
+    backgroundSize: "400% 400%",
+  },
+  "@keyframes gradient": {
+    "0%": {
+      backgroundPosition: "0% 50%",
+    },
+    "50%": {
+      backgroundPosition: "0% 100%",
+    },
+    "100%": {
+      backgroundPosition: "0% 50%",
+    }
+  },
+}));
 
 export const Hero: React.FC<{
   i18n: Translation;
 }> = ({ i18n }) => {
   const t = (key: keyof Translation) => i18n[key];
+  const styles = HeaderStyle("light");
+
   return (
     <Box
       display="grid"
@@ -14,12 +39,7 @@ export const Hero: React.FC<{
       alignItems="center"
       gap={4}
       padding="2rem"
-      sx={{
-        background:
-          "linear-gradient(180deg, rgba(52, 111, 153, 1) 0%, rgba(120, 137, 210, 1) 100%)",
-        height: "100vh",
-        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-      }}
+      className={styles.header}
     >
       <Box
         display="flex"
