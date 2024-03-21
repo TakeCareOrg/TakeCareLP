@@ -1,8 +1,12 @@
+import { Translation } from "@/core/i18n/i18n";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-export const Hero: React.FC = () => {
+export const Hero: React.FC<{
+  i18n: Translation;
+}> = ({ i18n }) => {
+  const t = (key: keyof Translation) => i18n[key];
   return (
     <Box
       display="grid"
@@ -32,12 +36,10 @@ export const Hero: React.FC = () => {
           color="white"
           fontFamily="Jua"
         >
-          Meet Andrew, the Friend who is Always by your side for your health !
+          {t("home_hero_title")}
         </Typography>
         <Typography fontSize="1rem" color="white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi
-          odio, porta aliquet pretium in, molestie id leo. Sed velit felis,
-          fermentum eget est nec, dapibus viverra dolor. In hac
+          {t("home_hero_text")}
         </Typography>
         <Box display="flex" gap={4}>
           <Button

@@ -1,8 +1,11 @@
-import { Box, Button, Typography } from "@mui/material";
-import Image from "next/image";
+import { Translation } from "@/core/i18n/i18n";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
-export const FeelView: React.FC = () => {
+export const FeelView: React.FC<{
+  i18n: Translation;
+}> = ({ i18n }) => {
+  const t = (key: keyof Translation) => i18n[key];
   return (
     <Box
       position="relative"
@@ -34,10 +37,10 @@ export const FeelView: React.FC = () => {
           fontFamily="Jua"
           sx={{
             textAlign: "center",
-            width: "60%",
+            width: "70%",
           }}
         >
-          Tell him how do you feel today
+          {t("home_feeling_title")}
         </Typography>
         <Typography
           fontSize="21"
@@ -47,12 +50,12 @@ export const FeelView: React.FC = () => {
             width: "60%",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi
-          odio, porta aliquet pretium in, molestie id leo.
+          {t("home_feeling_text")}
         </Typography>
       </Box>
       <img
         src="/images/feel.png"
+        alt="feel-image"
         style={{
           position: "absolute",
           top: "10%",
