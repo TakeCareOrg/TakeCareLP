@@ -1,8 +1,12 @@
+import { Translation } from "@/core/i18n/i18n";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-export const HereForYou: React.FC = () => {
+export const HereForYou: React.FC<{
+  i18n: Translation;
+}> = ({ i18n }) => {
+  const t = (key: keyof Translation) => i18n[key];
   return (
     <Box
       display="grid"
@@ -29,7 +33,7 @@ export const HereForYou: React.FC = () => {
             lineHeight: "1",
           }}
         >
-          He’s here for you
+          {t("home_here_for_you_title")}
         </Typography>
         <Typography
           fontSize="1rem"
@@ -39,12 +43,19 @@ export const HereForYou: React.FC = () => {
             lineHeight: "2.5",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi
-          odio, porta aliquet pretium in, molestie id leo. Sed velit felis,
-          fermentum eget est nec, dapibus viverra dolor. In hac Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Maecenas mi odio, porta
-          aliquet pretium in, molestie id leo. Sed velit felis, fermentum eget
-          est nec, dapibus viverra dolor. In hac
+          {t("home_here_for_you_text1")}
+          <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
+            {t("home_here_for_you_text_color1")}
+          </span>
+          {t("home_here_for_you_text2")}
+          <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
+            {t("home_here_for_you_text_color2")}
+          </span>
+          {t("home_here_for_you_text3")}
+          <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
+            {t("home_here_for_you_text_color3")}
+          </span>
+          {t("home_here_for_you_text4")}
         </Typography>
       </Box>
 
