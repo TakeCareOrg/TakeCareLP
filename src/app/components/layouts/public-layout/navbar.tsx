@@ -5,8 +5,14 @@ import Link from "next/link";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import LanguageIcon from "@mui/icons-material/Language";
+import { Lang } from "@/core/types";
+import { AvailableLocale } from "@/core/i18n/i18n";
+import { LangSelect } from "./lang-select";
 
-export const Navbar: React.FC = () => {
+export const Navbar: React.FC<{
+  locale?: AvailableLocale;
+  langs?: Lang[];
+}> = ({ locale, langs }) => {
   return (
     <AppBar
       position="absolute"
@@ -64,24 +70,7 @@ export const Navbar: React.FC = () => {
               </Typography>
             </Link>
 
-            <Button
-              variant="outlined"
-              color="inherit"
-              sx={{
-                color: "white",
-                textTransform: "none",
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "0.5rem",
-                padding: "0.5rem 1rem",
-                border: "1px solid white",
-                borderRadius: "10px",
-              }}
-            >
-              <LanguageIcon />
-              English
-            </Button>
+            <LangSelect options={langs} />
           </Box>
         </Toolbar>
       </Container>

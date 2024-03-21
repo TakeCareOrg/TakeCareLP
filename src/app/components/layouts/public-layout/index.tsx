@@ -1,10 +1,14 @@
 import { Box } from "@mui/material";
 import Navbar from "./navbar";
 import { Footer } from "./footer";
+import { AvailableLocale } from "@/core/i18n/i18n";
+import { Lang } from "@/core/types";
 
 export const PublicLayout: React.FC<{
+  locale?: AvailableLocale;
+  langs?: Lang[];
   children: React.ReactNode;
-}> = ({ children }) => {
+}> = ({ locale, langs, children }) => {
   return (
     <Box
       position="fixed"
@@ -27,7 +31,7 @@ export const PublicLayout: React.FC<{
         display="grid"
         gap={{ xs: "4rem", md: "8rem" }}
       >
-        <Navbar />
+        <Navbar locale={locale} langs={langs} />
         <Box>{children}</Box>
         <Footer />
       </Box>
