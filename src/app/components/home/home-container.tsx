@@ -10,6 +10,7 @@ import { FeelView } from "./feel";
 import { Lang } from "@/core/types";
 import { useI18N } from "@/core/i18n/i18n-provider";
 import { getTranslations } from "@/core/i18n/i18n";
+import { StepContainer } from "./steps-container";
 
 export default function HomeContainer({ langs }: { langs: Lang[] }) {
   const { locale } = useI18N();
@@ -22,6 +23,7 @@ export default function HomeContainer({ langs }: { langs: Lang[] }) {
         <HereForYou i18n={i18n} />
         <HealthDatas i18n={i18n} />
         <FeelView i18n={i18n} />
+        <StepContainer i18n={i18n} />
       </Box>
     </PublicLayout>
   );
