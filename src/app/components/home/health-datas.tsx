@@ -1,4 +1,5 @@
 import { Translation } from "@/core/i18n/i18n";
+import { Paragraph } from "@/core/ui/typography";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -41,14 +42,7 @@ export const HealthDatas: React.FC<{
         >
           {t("home_training_title")}
         </Typography>
-        <Typography
-          fontSize="1rem"
-          color="rgba(148, 148, 148, 1)"
-          fontWeight={300}
-          sx={{
-            lineHeight: "2.5",
-          }}
-        >
+        <Paragraph>
           {t("home_training_text1")}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
             {t("home_training_text_color1")}
@@ -58,7 +52,7 @@ export const HealthDatas: React.FC<{
             {t("home_training_text_color2")}
           </span>
           {t("home_training_text3")}
-        </Typography>
+        </Paragraph>
       </Box>
     </Box>
   );

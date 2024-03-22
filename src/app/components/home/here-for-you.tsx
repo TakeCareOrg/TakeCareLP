@@ -1,4 +1,5 @@
 import { Translation } from "@/core/i18n/i18n";
+import { Paragraph } from "@/core/ui/typography";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -35,14 +36,7 @@ export const HereForYou: React.FC<{
         >
           {t("home_here_for_you_title")}
         </Typography>
-        <Typography
-          fontSize="1rem"
-          color="rgba(148, 148, 148, 1)"
-          fontWeight={300}
-          sx={{
-            lineHeight: "2.5",
-          }}
-        >
+        <Paragraph>
           {t("home_here_for_you_text1")}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
             {t("home_here_for_you_text_color1")}
@@ -56,7 +50,7 @@ export const HereForYou: React.FC<{
             {t("home_here_for_you_text_color3")}
           </span>
           {t("home_here_for_you_text4")}
-        </Typography>
+        </Paragraph>
       </Box>
 
       <Image
