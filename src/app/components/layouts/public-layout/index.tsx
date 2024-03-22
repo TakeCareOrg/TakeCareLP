@@ -21,7 +21,7 @@ export const PublicLayout: React.FC<{
       overflow="auto"
       className="thin-scrollbar"
       sx={{
-        backgroundColor: "white",
+        backgroundColor: "#EEEEEE",
         scrollBehavior: "smooth",
       }}
     >
