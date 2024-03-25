@@ -37,6 +37,12 @@ const fr = {
   home_feeling_title: "Dites-lui comment vous vous sentez aujourd'hui",
   home_feeling_text:
     "Écrivez ce que vous voulez dans notre espace 'Journal', et voyez comment vous vous débrouillez avec le calendrier de l'histoire !",
+  // HOME STEPS SECTION
+
+  // HOME GET STARTED SECTION
+  home_get_started_title: "Commencer gratuitement",
+  home_get_started_text:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi odio, porta aliquet pretium in, molestie id leo. Sed velit felis, fermentum eget est nec, dapibus viverra dolor.",
 };
 
 export type Translation = typeof fr;
@@ -79,6 +85,12 @@ const en: Translation = {
   home_feeling_title: "Tell him how do you feel today",
   home_feeling_text:
     "Write anything you like in our 'Diary' area, and see how you're getting on with the history calendar !",
+  // HOME STEPS SECTION
+
+  // HOME GET STARTED SECTION
+  home_get_started_title: "Get started for Free",
+  home_get_started_text:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi odio, porta aliquet pretium in, molestie id leo. Sed velit felis, fermentum eget est nec, dapibus viverra dolor.",
 };
 
 const translations = { fr, en };

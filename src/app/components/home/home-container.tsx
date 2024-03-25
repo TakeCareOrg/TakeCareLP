@@ -11,6 +11,7 @@ import { Lang } from "@/core/types";
 import { useI18N } from "@/core/i18n/i18n-provider";
 import { getTranslations } from "@/core/i18n/i18n";
 import { StepContainer } from "./steps-container";
+import { GetStarted } from "./get-started";
 
 export default function HomeContainer({ langs }: { langs: Lang[] }) {
   const { locale } = useI18N();
@@ -24,6 +25,7 @@ export default function HomeContainer({ langs }: { langs: Lang[] }) {
         <HealthDatas i18n={i18n} />
         <FeelView i18n={i18n} />
         <StepContainer i18n={i18n} />
+        <GetStarted i18n={i18n} />
       </Box>
     </PublicLayout>
   );
