@@ -10,6 +10,7 @@ export const HereForYou: React.FC<{
   const t = (key: keyof Translation) => i18n[key];
   return (
     <Box
+      id="ia"
       display="grid"
       gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr" }}
       alignItems="center"

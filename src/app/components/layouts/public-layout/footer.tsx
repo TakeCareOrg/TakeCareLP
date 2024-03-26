@@ -1,97 +1,179 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+
+const footerLinks = [
+  {
+    title: "Navigation",
+    links: [
+      {
+        title: "Home",
+        url: "#hero",
+      },
+      {
+        title: "Andrew",
+        url: "#ia",
+      },
+      {
+        title: "Steps",
+        url: "#steps",
+      },
+    ],
+  },
+  {
+    title: "Others",
+    links: [
+      {
+        title: "Terms of Service",
+        url: "/terms",
+      },
+      {
+        title: "Privacy Policy",
+        url: "/policy",
+      },
+      {
+        title: "Contact Us",
+        url: "/contact",
+      },
+    ],
+  },
+  {
+    title: "TakeCare App",
+    links: [
+      {
+        title: "App Store",
+        url: "https://www.apple.com/ios/app-store/",
+      },
+      {
+        title: "Google Play",
+        url: "https://play.google.com/store",
+      },
+    ],
+  },
+];
 
 export const Footer: React.FC = () => {
   return (
     <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      width={{ xs: "90%", md: "1030px" }}
-      margin="auto"
-      marginBottom="5rem"
-      gap={4}
+      width="100%"
+      height="655px"
+      position="relative"
+      display="grid"
+      gridTemplateColumns={{ xs: "1fr", md: "auto 1fr" }}
+      sx={{
+        background: "url('/images/footer-bg.png') center no-repeat",
+        backgroundSize: "cover",
+      }}
     >
-      <Box
-        display="flex"
-        flexDirection={{ xs: "column", md: "row" }}
-        justifyContent="space-between"
-        alignItems="flex-start"
-        width="100%"
-        gap={{ xs: 4, md: 0 }}
-      >
-        <Box
-          display="flex"
-          flexDirection={{ xs: "row", md: "column" }}
-          alignItems={{
-            xs: "center",
-            md: "flex-start",
-          }}
-          justifyContent="center"
-          gap={2}
-        >
-          <Typography
-            fontSize="20px"
-            fontWeight={700}
-            color="white"
-            fontFamily="Hanson"
-          >
-            GOTTA <br />
-            HODL ‘EM ALL
-          </Typography>
-        </Box>
-
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="flex-start"
-          justifyContent="center"
-          gap={2}
-        >
-          <Typography
-            fontSize="20px"
-            fontWeight={700}
-            color="white"
-            fontFamily="Hanson"
-          >
-            NAVIGATION
-          </Typography>
-        </Box>
-
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="flex-start"
-          justifyContent="center"
-          gap={2}
-        >
-          <Typography
-            fontSize="20px"
-            fontWeight={700}
-            color="white"
-            fontFamily="Hanson"
-          >
-            MORE
-          </Typography>
-        </Box>
-      </Box>
-
-      <Box
-        height="1px"
-        width="100%"
-        sx={{
-          background: "rgba(255, 255, 255, 0.5)",
+      <Image
+        src="/images/footer.png"
+        alt="footer"
+        width={100}
+        height={100}
+        style={{
+          marginTop: "auto",
+          width: "auto",
+          height: "90%",
         }}
       />
-      <Typography
-        fontSize="16px"
-        fontWeight={300}
-        color="white"
-        sx={{
-          opacity: 0.5,
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="flex-start"
+        justifyContent="center"
+        gap={8}
+        width="80%"
+        margin="auto"
+        height="100%"
+      >
+        <Typography
+          fontSize="55px"
+          fontWeight={700}
+          color="white"
+          fontFamily="Jua"
+        >
+          TakeCare
+        </Typography>
+        <Typography
+          fontSize="39px"
+          fontWeight={700}
+          color="white"
+          fontFamily="Jua"
+        >
+          Lorem ipsum dolor si amet, consectetur
+        </Typography>
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="flex-start"
+          justifyContent="space-between"
+          width="80%"
+        >
+          {footerLinks.map((link) => (
+            <Box
+              key={link.title}
+              display="flex"
+              flexDirection="column"
+              alignItems="flex-start"
+              gap={2}
+            >
+              <Typography color="white" fontSize="20px" fontWeight={500}>
+                {link.title}
+              </Typography>
+              {link.links.map((l) => (
+                <TypographyFooter key={l.title}>
+                  <Link
+                    href={l.url}
+                    target={l.url.startsWith("#") ? "_self" : "_blank"}
+                    style={{
+                      color: "white",
+                      textDecoration: "none",
+                    }}
+                  >
+                    {l.title}
+                  </Link>
+                </TypographyFooter>
+              ))}
+            </Box>
+          ))}
+        </Box>
+        <Typography
+          color="white"
+          fontSize="12px"
+          sx={{
+            opacity: 0.7,
+          }}
+        >
+          © 2024 TakeCare. All rights reserved
+        </Typography>
+      </Box>
+      <Link
+        href="#hero"
+        style={{
+          textDecoration: "none",
+          backgroundColor: "white",
+          padding: "0.9rem 1rem",
+          borderRadius: "100px",
+          border: "none",
+          color: "black",
+          position: "fixed",
+          bottom: "2rem",
+          right: "2rem",
         }}
       >
-        © 2024 -EtherBeasts - All rights reserved
-      </Typography>
+        ↑
+      </Link>
+    </Box>
+  );
+};
+
+const TypographyFooter: React.FC<{
+  children: React.ReactNode;
+}> = ({ children }) => {
+  return (
+    <Box color={"white"} fontSize={"1rem"} fontWeight={200}>
+      {children}
     </Box>
   );
 };
