@@ -4,6 +4,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Image from "next/image";
 import React from "react";
+import { AppStoreLink, GooglePlayLink } from "../buttons";
 
 const HeaderStyle = makeStyles((theme: string) => ({
   header: {
@@ -64,32 +65,8 @@ export const Hero: React.FC<{
           {t("home_hero_text")}
         </Typography>
         <Box display="flex" gap={4}>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "white",
-              padding: "1rem 2rem",
-              borderRadius: "10px",
-              border: "none",
-              boxShadow: "none",
-              color: "black",
-            }}
-          >
-            App Store
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "white",
-              padding: "1rem 2rem",
-              borderRadius: "10px",
-              border: "none",
-              boxShadow: "none",
-              color: "black",
-            }}
-          >
-            Google Play
-          </Button>
+          <AppStoreLink />
+          <GooglePlayLink />
         </Box>
       </Box>
 

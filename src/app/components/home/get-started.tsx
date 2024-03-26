@@ -1,9 +1,9 @@
 "use client";
 import { Translation } from "@/core/i18n/i18n";
 import { Box, Button, Typography } from "@mui/material";
-
 import Image from "next/image";
 import React from "react";
+import { AppStoreLink, GooglePlayLink } from "../buttons";
 
 export const GetStarted: React.FC<{
   i18n: Translation;
@@ -54,32 +54,8 @@ export const GetStarted: React.FC<{
           {t("home_get_started_text")}
         </Typography>
         <Box display="flex" gap={4}>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "white",
-              padding: "1rem 2rem",
-              borderRadius: "10px",
-              border: "none",
-              boxShadow: "none",
-              color: "black",
-            }}
-          >
-            App Store
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "white",
-              padding: "1rem 2rem",
-              borderRadius: "10px",
-              border: "none",
-              boxShadow: "none",
-              color: "black",
-            }}
-          >
-            Google Play
-          </Button>
+          <AppStoreLink />
+          <GooglePlayLink />
         </Box>
       </Box>
     </Box>
