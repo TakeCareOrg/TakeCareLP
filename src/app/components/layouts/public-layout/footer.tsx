@@ -1,59 +1,82 @@
+import { useEnv } from "@/core/providers/env-provider";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const footerLinks = [
-  {
-    title: "Navigation",
-    links: [
-      {
-        title: "Home",
-        url: "#hero",
-      },
-      {
-        title: "Andrew",
-        url: "#ia",
-      },
-      {
-        title: "Steps",
-        url: "#steps",
-      },
-    ],
-  },
-  {
-    title: "Others",
-    links: [
-      {
-        title: "Terms of Service",
-        url: "/terms",
-      },
-      {
-        title: "Privacy Policy",
-        url: "/policy",
-      },
-      {
-        title: "Contact Us",
-        url: "/contact",
-      },
-    ],
-  },
-  {
-    title: "TakeCare App",
-    links: [
-      {
-        title: "App Store",
-        url: "https://www.apple.com/ios/app-store/",
-      },
-      {
-        title: "Google Play",
-        url: "https://play.google.com/store",
-      },
-    ],
-  },
-];
+interface FooterLink {
+  title: string;
+  links: FooterLinkItem[];
+}
+interface FooterLinkItem {
+  title: string;
+  url: string;
+  icon?: string;
+}
 
 export const Footer: React.FC = () => {
+  const { contactEmail } = useEnv();
+
+  const footerLinks: FooterLink[] = [
+    {
+      title: "Navigation",
+      links: [
+        {
+          title: "Home",
+          url: "#hero",
+        },
+        {
+          title: "Andrew",
+          url: "#ia",
+        },
+        {
+          title: "Steps",
+          url: "#steps",
+        },
+      ],
+    },
+    {
+      title: "Social",
+      links: [
+        {
+          title: "Instagram",
+          icon: "/images/icons/instagram.png",
+          url: "https://www.instagram.com",
+        },
+        {
+          title: "Facebook",
+          icon: "/images/icons/facebook.png",
+          url: "https://www.facebook.com",
+        },
+        {
+          title: "LinkedIn",
+          icon: "/images/icons/linkedin.png",
+          url: "https://www.linkedin.com",
+        },
+        {
+          title: "Contact Us",
+          icon: "/images/icons/contact.png",
+          url: `mailto:${contactEmail}`,
+        },
+      ],
+    },
+    {
+      title: "TakeCare App",
+      links: [
+        {
+          title: "App Store",
+          icon: "/images/icons/app-store.png",
+          url: "https://www.apple.com/ios/app-store/",
+        },
+        {
+          title: "Google Play",
+          icon: "/images/icons/google-play.png",
+          url: "https://play.google.com/store",
+        },
+      ],
+    },
+  ];
+
   return (
     <Box
       width="100%"
@@ -162,7 +185,19 @@ export const Footer: React.FC = () => {
                       textDecoration: "none",
                     }}
                   >
-                    {l.title}
+                    {l.icon ? (
+                      <Box display="flex" alignItems="center" gap={1}>
+                        <Image
+                          src={l.icon}
+                          alt={l.title}
+                          width={20}
+                          height={20}
+                        />
+                        {l.title}
+                      </Box>
+                    ) : (
+                      l.title
+                    )}
                   </Link>
                 </TypographyFooter>
               ))}
