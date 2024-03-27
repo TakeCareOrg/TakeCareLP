@@ -15,24 +15,41 @@ export const GetStarted: React.FC<{
       display="grid"
       gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr" }}
       alignItems="center"
-      width="98%"
+      width={{
+        xs: "100%",
+        md: "98%",
+      }}
+      padding={{
+        xs: "1rem 0",
+        md: "0",
+      }}
       margin="auto"
       sx={{
         background: 'url("/images/get-started-bg.png") center no-repeat',
         backgroundSize: "cover",
-        borderRadius: "30px",
+        borderRadius: {
+          xs: "0",
+          md: "30px",
+        },
       }}
     >
-      <Image
-        src="/images/get-started.png"
-        alt="hero-image"
-        width={500}
-        height={500}
-        style={{
-          width: "100%",
-          height: "100%",
+      <Box
+        display={{
+          xs: "none",
+          md: "block",
         }}
-      />
+      >
+        <Image
+          src="/images/get-started.png"
+          alt="hero-image"
+          width={500}
+          height={500}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </Box>
       <Box
         display="flex"
         flexDirection="column"
@@ -41,9 +58,16 @@ export const GetStarted: React.FC<{
         gap={4}
         width="90%"
         margin="auto"
+        padding={{
+          xs: "1rem",
+          md: "0rem",
+        }}
       >
         <Typography
-          fontSize="55px"
+          fontSize={{
+            xs: "30px",
+            md: "55px",
+          }}
           fontWeight={700}
           color="white"
           fontFamily="Jua"
