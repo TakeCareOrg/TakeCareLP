@@ -64,7 +64,7 @@ export const Navbar: React.FC<{
                 fontWeight={700}
                 fontFamily="Jua"
                 fontSize="2rem"
-                sx={{ color: "white" }}
+                sx={{ color: "white", display: { xs: "none", md: "block" } }}
               >
                 TakeCare
               </Typography>
