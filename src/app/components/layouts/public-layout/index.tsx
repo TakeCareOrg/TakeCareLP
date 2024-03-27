@@ -3,6 +3,7 @@ import Navbar from "./navbar";
 import { Footer } from "./footer";
 import { AvailableLocale } from "@/core/i18n/i18n";
 import { Lang } from "@/core/types";
+import Link from "next/link";
 
 export const PublicLayout: React.FC<{
   locale?: AvailableLocale;
@@ -35,6 +36,22 @@ export const PublicLayout: React.FC<{
         <Box>{children}</Box>
         <Footer />
       </Box>
+      <Link
+        href="#hero"
+        style={{
+          textDecoration: "none",
+          backgroundColor: "white",
+          padding: "0.9rem 1rem",
+          borderRadius: "100px",
+          border: "none",
+          color: "black",
+          position: "fixed",
+          bottom: "2rem",
+          right: "2rem",
+        }}
+      >
+        ↑
+      </Link>
     </Box>
   );
 };
