@@ -66,29 +66,44 @@ export const Footer: React.FC = () => {
         backgroundSize: "cover",
       }}
     >
-      <Image
-        src="/images/footer.png"
-        alt="footer"
-        width={100}
-        height={100}
-        style={{
-          marginTop: "auto",
-          width: "auto",
-          height: "90%",
+      <Box
+        display={{
+          xs: "none",
+          md: "block",
         }}
-      />
+        marginTop="auto"
+        height="90%"
+        width="auto"
+      >
+        <Image
+          src="/images/footer.png"
+          alt="footer"
+          width={100}
+          height={100}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </Box>
       <Box
         display="flex"
         flexDirection="column"
         alignItems="flex-start"
         justifyContent="center"
-        gap={8}
+        gap={{
+          xs: 4,
+          md: 8,
+        }}
         width="80%"
         margin="auto"
         height="100%"
       >
         <Typography
-          fontSize="55px"
+          fontSize={{
+            xs: "30px",
+            md: "55px",
+          }}
           fontWeight={700}
           color="white"
           fontFamily="Jua"
@@ -96,7 +111,10 @@ export const Footer: React.FC = () => {
           TakeCare
         </Typography>
         <Typography
-          fontSize="39px"
+          fontSize={{
+            xs: "21px",
+            md: "39px",
+          }}
           fontWeight={700}
           color="white"
           fontFamily="Jua"
@@ -105,9 +123,19 @@ export const Footer: React.FC = () => {
         </Typography>
         <Box
           display="flex"
-          flexDirection="row"
+          flexDirection={{
+            xs: "column",
+            md: "row",
+          }}
           alignItems="flex-start"
-          justifyContent="space-between"
+          justifyContent={{
+            xs: "center",
+            md: "space-between",
+          }}
+          gap={{
+            xs: 4,
+            md: 0,
+          }}
           width="80%"
         >
           {footerLinks.map((link) => (
@@ -116,7 +144,10 @@ export const Footer: React.FC = () => {
               display="flex"
               flexDirection="column"
               alignItems="flex-start"
-              gap={2}
+              gap={{
+                xs: 1,
+                md: 2,
+              }}
             >
               <Typography color="white" fontSize="20px" fontWeight={500}>
                 {link.title}
@@ -148,22 +179,6 @@ export const Footer: React.FC = () => {
           © 2024 TakeCare. All rights reserved
         </Typography>
       </Box>
-      <Link
-        href="#hero"
-        style={{
-          textDecoration: "none",
-          backgroundColor: "white",
-          padding: "0.9rem 1rem",
-          borderRadius: "100px",
-          border: "none",
-          color: "black",
-          position: "fixed",
-          bottom: "2rem",
-          right: "2rem",
-        }}
-      >
-        ↑
-      </Link>
     </Box>
   );
 };
