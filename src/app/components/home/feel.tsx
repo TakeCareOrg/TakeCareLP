@@ -1,5 +1,6 @@
 import { Translation } from "@/core/i18n/i18n";
 import { Box, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 export const FeelView: React.FC<{
@@ -14,11 +15,17 @@ export const FeelView: React.FC<{
       alignItems="center"
       justifyContent="center"
       gap={4}
-      padding="2rem"
+      padding={{
+        xs: "0rem",
+        md: "2rem",
+      }}
       sx={{
         background:
           "radial-gradient(rgba(111, 129, 200, 0.6), rgba(55, 75, 162, 1));",
-        minHeight: "600px",
+        minHeight: {
+          xs: "400px",
+          md: "600px",
+        },
       }}
     >
       <Box
@@ -27,44 +34,68 @@ export const FeelView: React.FC<{
         alignItems="center"
         justifyContent="center"
         gap={4}
-        width="80%"
+        width={{
+          xs: "95%",
+          md: "80%",
+        }}
         margin="auto"
       >
         <Typography
-          fontSize="65px"
+          fontSize={{
+            xs: "35px",
+            md: "65px",
+          }}
           fontWeight={700}
           color="white"
           fontFamily="Jua"
           sx={{
             textAlign: "center",
-            width: "70%",
+            width: {
+              xs: "95%",
+              md: "70%",
+            },
           }}
         >
           {t("home_feeling_title")}
         </Typography>
         <Typography
-          fontSize="21"
+          fontSize={{
+            xs: "16px",
+            md: "21px",
+          }}
           color="white"
           sx={{
             textAlign: "center",
-            width: "60%",
+            width: {
+              xs: "100%",
+              md: "60%",
+            },
           }}
         >
           {t("home_feeling_text")}
         </Typography>
       </Box>
-      <img
-        src="/images/feel.png"
-        alt="feel-image"
-        style={{
-          position: "absolute",
-          top: "10%",
-          bottom: "10%",
-          height: "80%",
-          width: "90%",
-          margin: "auto",
+
+      <Box
+        position="absolute"
+        top="10%"
+        bottom="10%"
+        height="80%"
+        width="90%"
+        margin="auto"
+        display={{
+          xs: "none",
+          md: "block",
         }}
-      />
+      >
+        <Image
+          src="/images/feel.png"
+          alt="feel-image"
+          width={645}
+          height={523}
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
     </Box>
   );
 };

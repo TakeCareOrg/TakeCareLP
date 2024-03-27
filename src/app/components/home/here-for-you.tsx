@@ -11,11 +11,18 @@ export const HereForYou: React.FC<{
   return (
     <Box
       id="ia"
-      display="grid"
+      display={{
+        xs: "flex",
+        md: "grid",
+      }}
       gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr" }}
+      flexDirection="column-reverse"
       alignItems="center"
       gap={4}
-      padding="2rem"
+      padding={{
+        xs: "0",
+        md: "2rem",
+      }}
     >
       <Box
         display="flex"
@@ -23,11 +30,14 @@ export const HereForYou: React.FC<{
         alignItems="flex-start"
         justifyContent="center"
         gap={4}
-        width="70%"
+        width={{
+          xs: "90%",
+          md: "70%",
+        }}
         margin="auto"
       >
         <Typography
-          fontSize="40px"
+          fontSize={{ xs: "20px", md: "40px" }}
           fontWeight={700}
           color="rgba(54, 112, 155, 1)"
           fontFamily="Jua"
@@ -37,7 +47,7 @@ export const HereForYou: React.FC<{
         >
           {t("home_here_for_you_title")}
         </Typography>
-        <Paragraph>
+        <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
           {t("home_here_for_you_text1")}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
             {t("home_here_for_you_text_color1")}
@@ -54,12 +64,15 @@ export const HereForYou: React.FC<{
         </Paragraph>
       </Box>
 
-      <Image
-        src="/images/here-for-you.png"
-        alt="here-for-you-image"
-        width={645}
-        height={463}
-      />
+      <Box width="90%" height="auto" margin="auto">
+        <Image
+          src="/images/here-for-you.png"
+          alt="here-for-you-image"
+          width={645}
+          height={463}
+          style={{ width: "100%", height: "100%" }}
+        />
+      </Box>
     </Box>
   );
 };

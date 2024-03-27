@@ -36,7 +36,7 @@ export const StepParagraph: React.FC<{
         </Typography>
       </Box>
       <Typography
-        fontSize="40px"
+        fontSize={{ xs: "20px", md: "40px" }}
         fontWeight={700}
         color="rgba(54, 112, 155, 1)"
         //   fontFamily="Jua"

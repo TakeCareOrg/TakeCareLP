@@ -11,24 +11,34 @@ export const Step2: React.FC<{
   const t = (key: keyof Translation) => i18n[key];
   return (
     <Box
-      display="grid"
+      display={{
+        xs: "flex",
+        md: "grid",
+      }}
+      flexDirection="column-reverse"
       gridTemplateColumns={{ xs: "1fr", md: "1fr 44px 1fr" }}
       alignItems="center"
-      gap={4}
-      padding="0 2rem"
+      gap={{
+        xs: 2,
+        md: 4,
+      }}
+      padding={{
+        xs: "0",
+        md: "0 2rem",
+      }}
     >
       <StepParagraph
         step={2}
         title="Synchronize your health data from your phone "
       >
-        <Paragraph>
+        <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
           At TakeCare, we’re committed to delivering personalized advice and
           top-notch service. To ensure we provide you with the best possible
           guidance, we kindly request that you synchronize our application with
           the health app integrated on your phone (such as Samsung Health or
           Apple Health).
         </Paragraph>
-        <Paragraph>
+        <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
           By doing so, we’ll have access to your health data, allowing us to
           tailor our recommendations specifically to your needs. Your well-being
           is our priority, and this synchronization ensures a seamless
@@ -39,7 +49,10 @@ export const Step2: React.FC<{
       <Box
         height="100%"
         position="relative"
-        display="flex"
+        display={{
+          xs: "none",
+          md: "flex",
+        }}
         flexDirection="column"
         alignItems="center"
       >
@@ -64,16 +77,24 @@ export const Step2: React.FC<{
           }}
         />
       </Box>
-      <Image
-        src="/images/step2.png"
-        alt="health-datas-image"
-        width={645}
-        height={588}
-        style={{
-          width: "100%",
-          height: "auto",
+      <Box
+        width={{
+          xs: "90%",
+          md: "100%",
         }}
-      />
+        margin="auto"
+      >
+        <Image
+          src="/images/step2.png"
+          alt="health-datas-image"
+          width={645}
+          height={588}
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        />
+      </Box>
     </Box>
   );
 };
