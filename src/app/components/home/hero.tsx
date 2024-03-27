@@ -37,24 +37,46 @@ export const Hero: React.FC<{
   return (
     <Box
       id="hero"
-      display="grid"
+      display={{
+        xs: "flex",
+        md: "grid",
+      }}
       gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr" }}
+      flexDirection="column"
       alignItems="center"
-      gap={4}
-      padding="2rem"
+      gap={{
+        xs: "0",
+        md: "2rem",
+      }}
+      padding={{
+        xs: "0rem",
+        md: "2rem",
+      }}
+      height="100vh"
       className={styles.header}
     >
       <Box
         display="flex"
         flexDirection="column"
-        alignItems="flex-start"
+        alignItems={{
+          xs: "center",
+          md: "flex-start",
+        }}
+        textAlign={{
+          xs: "center",
+          md: "left",
+        }}
         justifyContent="center"
         gap={4}
-        width="80%"
+        width={{
+          xs: "90%",
+          md: "80%",
+        }}
         margin="auto"
+        marginTop={{ xs: "10rem", md: "auto" }}
       >
         <Typography
-          fontSize="40px"
+          fontSize={{ xs: "24px", md: "40px" }}
           fontWeight={700}
           color="white"
           fontFamily="Jua"
@@ -64,22 +86,34 @@ export const Hero: React.FC<{
         <Typography fontSize="1rem" color="white">
           {t("home_hero_text")}
         </Typography>
-        <Box display="flex" gap={4}>
+        <Box
+          display="flex"
+          flexDirection="row"
+          gap={{
+            xs: "1rem",
+            md: "2rem",
+          }}
+        >
           <AppStoreLink />
           <GooglePlayLink />
         </Box>
       </Box>
-
-      <Image
-        src="/images/hero-phone.png"
-        alt="hero-image"
-        width={500}
-        height={500}
-        style={{
-          width: "auto !important",
-          height: "85% !important",
-        }}
-      />
+      <Box
+        width={{ xs: "70%", md: "auto" }}
+        height={{ xs: "auto", md: "85%" }}
+        margin="auto"
+      >
+        <Image
+          src="/images/hero-phone.png"
+          alt="hero-image"
+          width={500}
+          height={500}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </Box>
     </Box>
   );
 };
