@@ -11,7 +11,14 @@ export const StepContainer: React.FC<{
   i18n: Translation;
 }> = ({ i18n }) => {
   return (
-    <Box id="steps" display="grid" gap={0}>
+    <Box
+      id="steps"
+      display="grid"
+      gap={{
+        xs: "4rem",
+        md: "0rem",
+      }}
+    >
       <Step1 i18n={i18n} />
       <Step2 i18n={i18n} />
       <Step3 i18n={i18n} />
