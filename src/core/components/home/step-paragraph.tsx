@@ -39,7 +39,7 @@ export const StepParagraph: React.FC<{
         fontSize={{ xs: "20px", md: "40px" }}
         fontWeight={700}
         color="rgba(54, 112, 155, 1)"
-        //   fontFamily="Jua"
+        //   fontFamily="Plus Jakarta Sans"
         sx={{
           lineHeight: "1",
         }}

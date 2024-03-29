@@ -62,7 +62,7 @@ export const Navbar: React.FC<{
               />
               <Typography
                 fontWeight={700}
-                fontFamily="Jua"
+                fontFamily="Plus Jakarta Sans"
                 fontSize="2rem"
                 sx={{ color: "white", display: { xs: "none", md: "block" } }}
               >
