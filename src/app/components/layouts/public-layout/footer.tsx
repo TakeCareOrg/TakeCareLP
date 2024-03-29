@@ -1,3 +1,5 @@
+import { Translation } from "@/core/i18n/i18n";
+import { useI18N } from "@/core/i18n/i18n-provider";
 import { useEnv } from "@/core/providers/env-provider";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
@@ -16,6 +18,8 @@ interface FooterLinkItem {
 
 export const Footer: React.FC = () => {
   const { contactEmail } = useEnv();
+  const { i18n } = useI18N();
+  const t = (key: keyof Translation) => i18n[key];
 
   const footerLinks: FooterLink[] = [
     {
@@ -129,7 +133,7 @@ export const Footer: React.FC = () => {
           }}
           fontWeight={700}
           color="white"
-          fontFamily="Jua"
+          fontFamily="Plus Jakarta Sans"
         >
           TakeCare
         </Typography>
@@ -140,9 +144,9 @@ export const Footer: React.FC = () => {
           }}
           fontWeight={700}
           color="white"
-          fontFamily="Jua"
+          fontFamily="Plus Jakarta Sans"
         >
-          Lorem ipsum dolor si amet, consectetur
+          {t("footer_text")}
         </Typography>
         <Box
           display="flex"
