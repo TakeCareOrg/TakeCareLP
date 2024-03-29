@@ -5,7 +5,16 @@ import { EnvProvider } from "@/core/providers/env-provider";
 
 export const metadata: Metadata = {
   title: "TakeCare",
-  description: "oui",
+  description:
+    "Meet Andrew, the first AI medical doctor, and browse the whole app to take care of your physical and mental health.",
+  icons: { icon: "/icon.png" },
+  openGraph: {
+    title: "TakeCare",
+    description:
+      "Meet Andrew, the first AI medical doctor, and browse the whole app to take care of your physical and mental health.",
+    type: "website",
+    images: "/preview-image.png",
+  },
 };
 
 export default function RootLayout({
