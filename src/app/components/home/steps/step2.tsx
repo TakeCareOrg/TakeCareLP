@@ -27,22 +27,20 @@ export const Step2: React.FC<{
         md: "0 2rem",
       }}
     >
-      <StepParagraph
-        step={2}
-        title="Synchronize your health data from your phone "
-      >
+      <StepParagraph step={2} title={t("home_step2_title")}>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          At TakeCare, we’re committed to delivering personalized advice and
-          top-notch service. To ensure we provide you with the best possible
-          guidance, we kindly request that you synchronize our application with
-          the health app integrated on your phone (such as Samsung Health or
-          Apple Health).
+          {t("home_step2_text1")}
+          <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
+            {t("home_step2_text_color1")}
+          </span>
+          {t("home_step2_text2")}
         </Paragraph>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          By doing so, we’ll have access to your health data, allowing us to
-          tailor our recommendations specifically to your needs. Your well-being
-          is our priority, and this synchronization ensures a seamless
-          experience.
+          {t("home_step2_text3")}
+          <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
+            {t("home_step2_text_color2")}
+          </span>
+          {t("home_step2_text4")}
         </Paragraph>
       </StepParagraph>
 

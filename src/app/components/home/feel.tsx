@@ -47,7 +47,7 @@ export const FeelView: React.FC<{
           }}
           fontWeight={700}
           color="white"
-          fontFamily="Jua"
+          fontFamily="Plus Jakarta Sans"
           sx={{
             textAlign: "center",
             width: {

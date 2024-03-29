@@ -79,7 +79,7 @@ export const Hero: React.FC<{
           fontSize={{ xs: "24px", md: "40px" }}
           fontWeight={700}
           color="white"
-          fontFamily="Jua"
+          fontFamily="Plus Jakarta Sans"
         >
           {t("home_hero_title")}
         </Typography>

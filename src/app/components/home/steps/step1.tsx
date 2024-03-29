@@ -73,19 +73,13 @@ export const Step1: React.FC<{
         />
       </Box>
 
-      <StepParagraph
-        step={1}
-        title="Create your account and complete our quiz !"
-      >
+      <StepParagraph step={1} title={t("home_step1_title")}>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          In order to provide the best possible advice on how to improve your
-          health, Andrew the doc has been trained on a multitude of medical data
-          !
-        </Paragraph>
-        <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          In order to provide the best possible advice on how to improve your
-          health, Andrew the doc has been trained on a multitude of medical data
-          ! Thanks to this, lorem ipsum di cap
+          {t("home_step1_text1")}
+          <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
+            {t("home_step1_text_color1")}
+          </span>
+          {t("home_step1_text2")}
         </Paragraph>
       </StepParagraph>
     </Box>

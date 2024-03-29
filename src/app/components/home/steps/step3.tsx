@@ -73,14 +73,16 @@ export const Step3: React.FC<{
         />
       </Box>
 
-      <StepParagraph
-        step={3}
-        title="Chat with our AI to get some advices and learn about yourself !"
-      >
+      <StepParagraph step={3} title={t("home_step3_title")}>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          In order to provide the best possible advice on how to improve your
-          health, Andrew the doc has been trained on a multitude of medical data
-          !
+          {t("home_step3_text1")}
+          <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
+            {t("home_step3_text_color1")}
+          </span>
+          {t("home_step3_text2")}
+          <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
+            {t("home_step3_text_color2")}
+          </span>
         </Paragraph>
       </StepParagraph>
     </Box>
