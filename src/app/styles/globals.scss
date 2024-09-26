@@ -7,7 +7,27 @@
   --title-gradient: linear-gradient(to right, #346F99 0%, #33ADEF 50%, #7889D2 100%);
   --button-action-gradient: linear-gradient(120deg, #33ADEF 0%, #7889D2 100%);
   --button-gradient: linear-gradient(to bottom, #050520 0%, #24243F 100%);
+  --button-hover-gradient: linear-gradient(to bottom, #050520 0%, #575774 100%);
   --input-gradient: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.16) 100%);
+
+  --nav-background: transparent;
+
+  --border-width: 0.5px;
+  --border-color: #34333D;
+  --border-input-color: #53535C;
+  --border-radius-regular: 10px;
+  --border-radius-large: 20px;
+
+  --small-logo-size: 50px;
+
+  --font-size-small: calc(12px + 0.2vw);
+  --font-size-medium: calc(16px + 0.2vw)
+  --font-size-large: calc(20px + 0.2vw);
+
+  --font-size-title: calc(96px + 0.2vw);
+  --font-size-subtitle: calc(40px + 0.2vw);
+
+
 }
 
 * {
