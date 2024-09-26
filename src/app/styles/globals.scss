@@ -1,0 +1,30 @@
+:root {
+  --color-primary: #FFFFFF;
+  --color-secondary: #ACB1C8;
+
+  --placeholder: #62657E;
+
+  --title-gradient: linear-gradient(to right, #346F99 0%, #33ADEF 50%, #7889D2 100%);
+  --button-action-gradient: linear-gradient(120deg, #33ADEF 0%, #7889D2 100%);
+  --button-gradient: linear-gradient(to bottom, #050520 0%, #24243F 100%);
+  --input-gradient: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.16) 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #050520;
+  font-family: var(--font-techna);
+  color: var(--color-primary);
+}

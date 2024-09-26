@@ -1,6 +1,11 @@
-import HomeContainer from "./components/home/home-container";
-import { selectableLangs } from "@/core/layouts/selectable-langs";
+import { Home } from "./pages/Home";
+import { Navbar } from "./layouts/navbar";
 
-export default function Home() {
-  return <HomeContainer langs={selectableLangs} />;
+export default function Page() {
+  return (
+    <>
+      <Navbar />
+      <Home />
+    </>
+  );
 }

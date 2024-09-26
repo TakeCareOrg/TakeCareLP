@@ -10,9 +10,9 @@ import {
   Typography,
   styled,
 } from "@mui/material";
-import { AvailableLang, Lang, availableLangs } from "@/core/types";
-import { useEnv } from "@/core/providers/env-provider";
-import { useI18N } from "@/core/i18n/i18n-provider";
+import { AvailableLang, Lang, availableLangs } from "@/app/types";
+import { useEnv } from "@/app/providers/env-provider";
+import { useI18N } from "@/app/i18n/i18n-provider";
 import LanguageIcon from "@mui/icons-material/Language";
 
 export const LangSelect: React.FC<{
