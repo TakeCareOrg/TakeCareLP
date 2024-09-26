@@ -12,7 +12,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 const techna = localFont({
-  src: "../../public/fonts/Techna_Regular.otf",
+  src: "../../public/fonts/techna_regular-webfont.woff",
   variable: "--font-techna",
 });
 

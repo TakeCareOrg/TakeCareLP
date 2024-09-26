@@ -15,6 +15,8 @@
   --border-width: 0.5px;
   --border-color: #34333D;
   --border-input-color: #53535C;
+
+  --border-radius-small: 5px;
   --border-radius-regular: 10px;
   --border-radius-large: 20px;
 
@@ -24,9 +26,15 @@
   --font-size-medium: calc(16px + 0.2vw)
   --font-size-large: calc(20px + 0.2vw);
 
-  --font-size-title: calc(96px + 0.2vw);
-  --font-size-subtitle: calc(40px + 0.2vw);
+  --font-size-title: calc(72px + 0.2vw);
+  --font-size-subtitle: calc(36px + 0.2vw);
 
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
 
 }
 
@@ -47,4 +55,7 @@ body {
   background-color: #050520;
   font-family: var(--font-techna);
   color: var(--color-primary);
+  font-weight: var(--regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
