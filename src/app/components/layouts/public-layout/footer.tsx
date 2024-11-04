@@ -37,6 +37,10 @@ export const Footer: React.FC = () => {
           title: "Steps",
           url: "#steps",
         },
+        {
+          title: "Privacy Policy",
+          url: "/privacy",
+        },
       ],
     },
     {
