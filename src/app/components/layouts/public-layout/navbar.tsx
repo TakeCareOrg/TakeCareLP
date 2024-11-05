@@ -11,6 +11,7 @@ export const Navbar: React.FC<{
   langs?: Lang[];
   privacyPolicy?: boolean;
 }> = ({ langs, privacyPolicy = false }) => {
+
   return (
     <AppBar
       position="absolute"

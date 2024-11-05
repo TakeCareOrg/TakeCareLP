@@ -175,6 +175,7 @@ const fr = {
   privacy_policy_values:
     "Si vous avez des questions concernant cette politique de confidentialité ou sur la manière dont nous gérons vos données, veuillez nous contacter à :",
   privacy_policy_contact_email: "takecareaimedical@gmail.com",
+
 };
 
 export type Translation = typeof fr;
