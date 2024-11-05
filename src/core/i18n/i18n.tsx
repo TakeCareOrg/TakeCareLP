@@ -1,3 +1,5 @@
+import { AvailableLang, defaultLang } from "../types";
+
 const fr = {
   app_name: "TakeCare",
   // META TAGS
@@ -352,9 +354,12 @@ const en: Translation = {
   privacy_policy_contact_email: "takecareaimedical@gmail.com",
 };
 
-const translations = { fr, en };
+const langs = { fr, en };
 
-export type AvailableLocale = keyof typeof translations;
-
-export const getTranslations = (locale: AvailableLocale) =>
-  translations[locale];
+export const t = (
+  key: keyof Translation,
+  lang: AvailableLang = defaultLang
+): string => {
+  const value = langs[lang][key];
+  return Array.isArray(value) ? value.join(", ") : value;
+};

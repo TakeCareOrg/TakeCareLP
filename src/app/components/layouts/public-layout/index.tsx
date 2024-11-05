@@ -1,15 +1,14 @@
 import { Box } from "@mui/material";
 import Navbar from "./navbar";
 import { Footer } from "./footer";
-import { AvailableLocale } from "@/core/i18n/i18n";
-import { Lang } from "@/core/types";
 import Link from "next/link";
+import { PropsWithChildren } from "react";
 
-export const PublicLayout: React.FC<{
-  locale?: AvailableLocale;
-  langs?: Lang[];
-  children: React.ReactNode;
-}> = ({ locale, langs, children }) => {
+export const PublicLayout: React.FC<
+  PropsWithChildren & {
+    privacyPolicy?: boolean;
+  }
+> = ({ children, privacyPolicy }) => {
   return (
     <Box
       position="fixed"
@@ -32,8 +31,10 @@ export const PublicLayout: React.FC<{
         display="grid"
         gap={{ xs: "4rem", md: "8rem" }}
       >
-        <Navbar locale={locale} langs={langs} />
-        <Box>{children}</Box>
+        <Navbar privacyPolicy={privacyPolicy} />
+        <Box display="grid" gap={{ xs: "4rem", md: "8rem" }}>
+          {children}
+        </Box>
         <Footer />
       </Box>
       <Link

@@ -2,22 +2,21 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Link from "next/link";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import LanguageIcon from "@mui/icons-material/Language";
 import { Lang } from "@/core/types";
-import { AvailableLocale } from "@/core/i18n/i18n";
 import { LangSelect } from "./lang-select";
 
 export const Navbar: React.FC<{
-  locale?: AvailableLocale;
   langs?: Lang[];
-}> = ({ locale, langs }) => {
+  privacyPolicy?: boolean;
+}> = ({ langs, privacyPolicy = false }) => {
   return (
     <AppBar
       position="absolute"
       sx={{
-        background: "transparent",
+        background: privacyPolicy ? "#7387CE" : "transparent",
+        animation: `$gradient 10s infinite alternate`,
         boxShadow: "none",
         top: 0,
       }}

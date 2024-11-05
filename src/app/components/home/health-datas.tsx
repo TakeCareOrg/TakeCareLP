@@ -1,13 +1,12 @@
-import { Translation } from "@/core/i18n/i18n";
+import { t } from "@/core/i18n/i18n";
+import { useI18N } from "@/core/i18n/i18n-provider";
 import { Paragraph } from "@/core/ui/typography";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-export const HealthDatas: React.FC<{
-  i18n: Translation;
-}> = ({ i18n }) => {
-  const t = (key: keyof Translation) => i18n[key];
+export const HealthDatas: React.FC = () => {
+  const { lang } = useI18N();
   return (
     <Box
       display="grid"
@@ -50,18 +49,18 @@ export const HealthDatas: React.FC<{
             lineHeight: "1",
           }}
         >
-          {t("home_training_title")}
+          {t("home_training_title", lang)}
         </Typography>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          {t("home_training_text1")}
+          {t("home_training_text1", lang)}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
-            {t("home_training_text_color1")}
+            {t("home_training_text_color1", lang)}
           </span>
-          {t("home_training_text2")}
+          {t("home_training_text2", lang)}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
-            {t("home_training_text_color2")}
+            {t("home_training_text_color2", lang)}
           </span>
-          {t("home_training_text3")}
+          {t("home_training_text3", lang)}
         </Paragraph>
       </Box>
     </Box>

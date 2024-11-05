@@ -1,12 +1,11 @@
-import { Translation } from "@/core/i18n/i18n";
+import { t } from "@/core/i18n/i18n";
+import { useI18N } from "@/core/i18n/i18n-provider";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-export const FeelView: React.FC<{
-  i18n: Translation;
-}> = ({ i18n }) => {
-  const t = (key: keyof Translation) => i18n[key];
+export const FeelView: React.FC = () => {
+  const { lang } = useI18N();
   return (
     <Box
       position="relative"
@@ -56,7 +55,7 @@ export const FeelView: React.FC<{
             },
           }}
         >
-          {t("home_feeling_title")}
+          {t("home_feeling_title", lang)}
         </Typography>
         <Typography
           fontSize={{
@@ -72,7 +71,7 @@ export const FeelView: React.FC<{
             },
           }}
         >
-          {t("home_feeling_text")}
+          {t("home_feeling_text", lang)}
         </Typography>
       </Box>
 

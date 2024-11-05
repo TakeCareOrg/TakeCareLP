@@ -20,7 +20,7 @@ export const LangSelect: React.FC<{
   onChange?: (_value: AvailableLang) => void;
   sx?: SxProps;
 }> = ({ options = [], onChange, sx = {} }) => {
-  const { locale, setLocale } = useI18N();
+  const { lang, setLang } = useI18N();
   const { langs } = useEnv();
 
   const langOptions = useMemo(
@@ -33,14 +33,10 @@ export const LangSelect: React.FC<{
       const locale = e.target.value as AvailableLang;
 
       onChange?.(locale);
-      setLocale(locale);
+      setLang(locale);
     },
-    [onChange, setLocale]
+    [onChange, setLang]
   );
-
-  if (!locale) {
-    return null;
-  }
 
   return (
     <Box
@@ -59,7 +55,7 @@ export const LangSelect: React.FC<{
       <LanguageIcon />
       <StyledSelect
         id="lang-select"
-        value={locale}
+        value={lang}
         onChange={handleChange}
         inputProps={{
           MenuProps: {

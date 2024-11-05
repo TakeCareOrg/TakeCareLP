@@ -1,10 +1,11 @@
 "use client";
-import { Translation } from "@/core/i18n/i18n";
-import { Box, Button, Typography } from "@mui/material";
+import { t } from "@/core/i18n/i18n";
+import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Image from "next/image";
 import React from "react";
 import { AppStoreLink, GooglePlayLink } from "../buttons";
+import { useI18N } from "@/core/i18n/i18n-provider";
 
 const HeaderStyle = makeStyles((theme: string) => ({
   header: {
@@ -28,11 +29,9 @@ const HeaderStyle = makeStyles((theme: string) => ({
   },
 }));
 
-export const Hero: React.FC<{
-  i18n: Translation;
-}> = ({ i18n }) => {
-  const t = (key: keyof Translation) => i18n[key];
+export const Hero: React.FC = () => {
   const styles = HeaderStyle("light");
+  const { lang } = useI18N();
 
   return (
     <Box
@@ -81,10 +80,10 @@ export const Hero: React.FC<{
           color="white"
           fontFamily="Plus Jakarta Sans"
         >
-          {t("home_hero_title")}
+          {t("home_hero_title", lang)}
         </Typography>
         <Typography fontSize="1rem" color="white">
-          {t("home_hero_text")}
+          {t("home_hero_text", lang)}
         </Typography>
         <Box
           display="flex"

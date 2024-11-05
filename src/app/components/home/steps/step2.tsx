@@ -1,14 +1,13 @@
 import { StepParagraph } from "@/core/components/home/step-paragraph";
-import { Translation } from "@/core/i18n/i18n";
+import { t } from "@/core/i18n/i18n";
+import { useI18N } from "@/core/i18n/i18n-provider";
 import { Paragraph } from "@/core/ui/typography";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-export const Step2: React.FC<{
-  i18n: Translation;
-}> = ({ i18n }) => {
-  const t = (key: keyof Translation) => i18n[key];
+export const Step2: React.FC = () => {
+  const { lang } = useI18N();
   return (
     <Box
       display={{
@@ -27,20 +26,20 @@ export const Step2: React.FC<{
         md: "0 2rem",
       }}
     >
-      <StepParagraph step={2} title={t("home_step2_title")}>
+      <StepParagraph step={2} title={t("home_step2_title", lang)}>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          {t("home_step2_text1")}
+          {t("home_step2_text1", lang)}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
-            {t("home_step2_text_color1")}
+            {t("home_step2_text_color1", lang)}
           </span>
-          {t("home_step2_text2")}
+          {t("home_step2_text2", lang)}
         </Paragraph>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          {t("home_step2_text3")}
+          {t("home_step2_text3", lang)}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
-            {t("home_step2_text_color2")}
+            {t("home_step2_text_color2", lang)}
           </span>
-          {t("home_step2_text4")}
+          {t("home_step2_text4", lang)}
         </Paragraph>
       </StepParagraph>
 
