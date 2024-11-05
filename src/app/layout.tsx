@@ -4,12 +4,12 @@ import { I18NProvider } from "@/core/i18n/i18n-provider";
 import { EnvProvider } from "@/core/providers/env-provider";
 
 export const metadata: Metadata = {
-  title: "TakeCare",
+  title: "TakeCareAI",
   description:
     "Meet Andrew, the first AI medical doctor, and browse the whole app to take care of your physical and mental health.",
   icons: { icon: "/icon.png" },
   openGraph: {
-    title: "TakeCare",
+    title: "TakeCareAI",
     description:
       "Meet Andrew, the first AI medical doctor, and browse the whole app to take care of your physical and mental health.",
     type: "website",
