@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Navbar from "./navbar";
 import { Footer } from "./footer";
+
 import Link from "next/link";
 import { PropsWithChildren } from "react";
 
@@ -9,6 +10,7 @@ export const PublicLayout: React.FC<
     privacyPolicy?: boolean;
   }
 > = ({ children, privacyPolicy }) => {
+
   return (
     <Box
       position="fixed"
@@ -31,10 +33,12 @@ export const PublicLayout: React.FC<
         display="grid"
         gap={{ xs: "4rem", md: "8rem" }}
       >
+
         <Navbar privacyPolicy={privacyPolicy} />
         <Box display="grid" gap={{ xs: "4rem", md: "8rem" }}>
           {children}
         </Box>
+
         <Footer />
       </Box>
       <Link

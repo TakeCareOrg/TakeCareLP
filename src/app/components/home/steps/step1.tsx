@@ -6,6 +6,7 @@ import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
+
 export const Step1: React.FC = () => {
   const { lang } = useI18N();
   return (

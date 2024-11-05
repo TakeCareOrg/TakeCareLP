@@ -33,6 +33,7 @@ export const LangSelect: React.FC<{
       const locale = e.target.value as AvailableLang;
 
       onChange?.(locale);
+
       setLang(locale);
     },
     [onChange, setLang]

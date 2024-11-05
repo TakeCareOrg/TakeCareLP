@@ -6,6 +6,7 @@ import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
+
 export const Step2: React.FC = () => {
   const { lang } = useI18N();
   return (
@@ -26,6 +27,7 @@ export const Step2: React.FC = () => {
         md: "0 2rem",
       }}
     >
+
       <StepParagraph step={2} title={t("home_step2_title", lang)}>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
           {t("home_step2_text1", lang)}
@@ -40,6 +42,7 @@ export const Step2: React.FC = () => {
             {t("home_step2_text_color2", lang)}
           </span>
           {t("home_step2_text4", lang)}
+
         </Paragraph>
       </StepParagraph>
 

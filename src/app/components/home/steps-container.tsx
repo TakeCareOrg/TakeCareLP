@@ -6,6 +6,7 @@ import { Step1 } from "./steps/step1";
 import { Step2 } from "./steps/step2";
 import { Step3 } from "./steps/step3";
 
+
 export const StepContainer: React.FC = () => {
   return (
     <Box
@@ -16,9 +17,11 @@ export const StepContainer: React.FC = () => {
         md: "0rem",
       }}
     >
+
       <Step1 />
       <Step2 />
       <Step3 />
+
     </Box>
   );
 };

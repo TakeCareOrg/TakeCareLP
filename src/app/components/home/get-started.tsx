@@ -1,4 +1,5 @@
 "use client";
+
 import { t } from "@/core/i18n/i18n";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";

@@ -61,6 +61,7 @@ export const HealthDatas: React.FC = () => {
             {t("home_training_text_color2", lang)}
           </span>
           {t("home_training_text3", lang)}
+
         </Paragraph>
       </Box>
     </Box>

@@ -1,4 +1,5 @@
 "use client";
+
 import { t } from "@/core/i18n/i18n";
 import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
@@ -80,6 +81,7 @@ export const Hero: React.FC = () => {
           color="white"
           fontFamily="Plus Jakarta Sans"
         >
+
           {t("home_hero_title", lang)}
         </Typography>
         <Typography fontSize="1rem" color="white">

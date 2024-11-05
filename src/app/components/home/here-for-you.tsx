@@ -1,3 +1,4 @@
+
 import { t } from "@/core/i18n/i18n";
 import { useI18N } from "@/core/i18n/i18n-provider";
 import { Paragraph } from "@/core/ui/typography";
@@ -7,6 +8,7 @@ import React from "react";
 
 export const HereForYou: React.FC = () => {
   const { lang } = useI18N();
+
   return (
     <Box
       id="ia"
@@ -44,6 +46,7 @@ export const HereForYou: React.FC = () => {
             lineHeight: "1",
           }}
         >
+
           {t("home_here_for_you_title", lang)}
         </Typography>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
@@ -60,6 +63,7 @@ export const HereForYou: React.FC = () => {
             {t("home_here_for_you_text_color3", lang)}
           </span>
           {t("home_here_for_you_text4", lang)}
+
         </Paragraph>
       </Box>
 
