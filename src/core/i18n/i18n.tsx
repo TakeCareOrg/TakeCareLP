@@ -1,8 +1,8 @@
 import { AvailableLang, defaultLang } from "../types";
 const fr = {
-  app_name: "TakeCare",
+  app_name: "TakeCareAI",
   // META TAGS
-  meta_title: "TakeCare",
+  meta_title: "TakeCareAI",
   meta_description:
     "Rencontrez Andrew, l'ami qui est toujours à vos côtés pour votre santé !",
   // COMMUN STRINGS
@@ -47,7 +47,7 @@ const fr = {
     ", ce qui nous permettra de vous fournir des conseils sur mesure adaptés à vos besoins ",
   home_step2_title: "Synchronisez vos données de santé depuis votre téléphone",
   home_step2_text1:
-    "Chez TakeCare, nous nous engageons à fournir des conseils personnalisés et un service de premier ordre. Afin de nous assurer que nous vous fournissons les meilleurs conseils possibles, nous vous demandons de bien vouloir ",
+    "Chez TakeCareAI, nous nous engageons à fournir des conseils personnalisés et un service de premier ordre. Afin de nous assurer que nous vous fournissons les meilleurs conseils possibles, nous vous demandons de bien vouloir ",
   home_step2_text_color1: "synchroniser",
   home_step2_text2:
     " notre application avec l'application de santé intégrée à votre téléphone (telle que Samsung Health ou Apple Health)",
@@ -73,7 +73,7 @@ const fr = {
   privacy_policy_title: "Politique de confidentialité",
   privacy_policy_title_intro: "1. Introduction",
   privacy_policy_intro:
-    "Bienvenue sur TakeCare. Nous prenons la protection de votre vie privée très au sérieux. Cette politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos données personnelles lorsque vous utilisez notre application médicale. Nous respectons strictement le Règlement Général sur la Protection des Données (RGPD) en vigueur dans l’Union européenne.",
+    "Bienvenue sur TakeCareAI. Nous prenons la protection de votre vie privée très au sérieux. Cette politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos données personnelles lorsque vous utilisez notre application médicale. Nous respectons strictement le Règlement Général sur la Protection des Données (RGPD) en vigueur dans l’Union européenne.",
   privacy_policy_data_title: "2. Collecte de données",
   privacy_policy_data_content:
     "Lorsque vous utilisez l'Application, nous collectons vos données personnelles via les librairies HealthConnect de Google et HealthKit d'Apple. Les types de données que nous collectons incluent :",
@@ -181,9 +181,9 @@ const fr = {
 export type Translation = typeof fr;
 
 const en: Translation = {
-  app_name: "TakeCare",
+  app_name: "TakeCareAI",
   // META TAGS
-  meta_title: "TakeCare",
+  meta_title: "TakeCareAI",
   meta_description:
     "Meet Andrew, the Friend who is Always by your side for your health !",
   // COMMUN STRINGS
@@ -227,7 +227,7 @@ const en: Translation = {
     ", enabling us to provide tailored advice suited to your needs.",
   home_step2_title: "Synchronize your health data from your phone",
   home_step2_text1:
-    "At TakeCare, we’re committed to delivering personalized advice and top-notch service. To ensure we provide you with the best possible guidance, we kindly request that you ",
+    "At TakeCareAI, we’re committed to delivering personalized advice and top-notch service. To ensure we provide you with the best possible guidance, we kindly request that you ",
   home_step2_text_color1: "synchronize",
   home_step2_text2:
     " our application with the health app integrated on your phone (such as Samsung Health or Apple Health).",
@@ -252,7 +252,7 @@ const en: Translation = {
   privacy_policy_title: "Privacy Policy",
   privacy_policy_title_intro: "1. Introduction",
   privacy_policy_intro:
-    "Welcome to TakeCare. We take your privacy very seriously. This privacy policy describes how we collect, use, store and protect your personal data when you use our medical app. We strictly comply with the General Data Protection Regulation (GDPR) in force in the European Union.",
+    "Welcome to TakeCareAI. We take your privacy very seriously. This privacy policy describes how we collect, use, store and protect your personal data when you use our medical app. We strictly comply with the General Data Protection Regulation (GDPR) in force in the European Union.",
   privacy_policy_data_title: "2. Data collection",
   privacy_policy_data_content:
     "When you use the App, we collect your personal data through Google’s HealthConnect and Apple’s HealthKit libraries. The types of data we collect include:",
@@ -363,4 +363,3 @@ export const t = (
   const value = langs[lang][key];
   return Array.isArray(value) ? value.join(", ") : value;
 };
-

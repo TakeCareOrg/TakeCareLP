@@ -66,7 +66,7 @@ export const Navbar: React.FC<{
                 fontSize="2rem"
                 sx={{ color: "white", display: { xs: "none", md: "block" } }}
               >
-                TakeCare
+                TakeCareAI
               </Typography>
             </Link>
 

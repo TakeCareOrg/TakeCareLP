@@ -28,6 +28,8 @@ export const LangSelect: React.FC<{
     [options, langs]
   );
 
+  console.log(langOptions);
+
   const handleChange = useCallback(
     (e: SelectChangeEvent<unknown>) => {
       const locale = e.target.value as AvailableLang;
@@ -75,26 +77,24 @@ export const LangSelect: React.FC<{
           ...sx,
         }}
       >
-        {langOptions.map((lang) => (
-          <MenuItem
-            key={`lang-select-${lang.code}`}
-            value={lang.code}
-            sx={{
-              "&:hover": {
-                backgroundColor: "rgba(0, 0, 0, 0.1)",
-              },
-            }}
-          >
-            <Typography
-              color="white"
-              fontSize="1rem"
-              fontWeight={400}
-              component="p"
+        {langOptions.map((lang) =>
+          lang?.code ? (
+            <MenuItem
+              key={`lang-select-${lang.code}`}
+              value={lang.code}
+              sx={{ "&:hover": { backgroundColor: "rgba(0, 0, 0, 0.1)" } }}
             >
-              {`${lang.name} / ${lang.flag}`}
-            </Typography>
-          </MenuItem>
-        ))}
+              <Typography
+                color="white"
+                fontSize="1rem"
+                fontWeight={400}
+                component="p"
+              >
+                {`${lang.name} / ${lang.flag}`}
+              </Typography>
+            </MenuItem>
+          ) : null
+        )}
       </StyledSelect>
     </Box>
   );
