@@ -1,13 +1,14 @@
-import { Translation } from "@/core/i18n/i18n";
+
+import { t } from "@/core/i18n/i18n";
+import { useI18N } from "@/core/i18n/i18n-provider";
 import { Paragraph } from "@/core/ui/typography";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-export const HereForYou: React.FC<{
-  i18n: Translation;
-}> = ({ i18n }) => {
-  const t = (key: keyof Translation) => i18n[key];
+export const HereForYou: React.FC = () => {
+  const { lang } = useI18N();
+
   return (
     <Box
       id="ia"
@@ -45,22 +46,24 @@ export const HereForYou: React.FC<{
             lineHeight: "1",
           }}
         >
-          {t("home_here_for_you_title")}
+
+          {t("home_here_for_you_title", lang)}
         </Typography>
         <Paragraph fontSize={{ xs: "12px", md: "1rem" }}>
-          {t("home_here_for_you_text1")}
+          {t("home_here_for_you_text1", lang)}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
-            {t("home_here_for_you_text_color1")}
+            {t("home_here_for_you_text_color1", lang)}
           </span>
-          {t("home_here_for_you_text2")}
+          {t("home_here_for_you_text2", lang)}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
-            {t("home_here_for_you_text_color2")}
+            {t("home_here_for_you_text_color2", lang)}
           </span>
-          {t("home_here_for_you_text3")}
+          {t("home_here_for_you_text3", lang)}
           <span style={{ color: "rgba(54, 112, 155, 1)", fontWeight: "bold" }}>
-            {t("home_here_for_you_text_color3")}
+            {t("home_here_for_you_text_color3", lang)}
           </span>
-          {t("home_here_for_you_text4")}
+          {t("home_here_for_you_text4", lang)}
+
         </Paragraph>
       </Box>
 

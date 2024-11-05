@@ -1,15 +1,14 @@
 "use client";
-import { Translation } from "@/core/i18n/i18n";
-import { Box, Button, Typography } from "@mui/material";
+
+import { t } from "@/core/i18n/i18n";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import { AppStoreLink, GooglePlayLink } from "../buttons";
+import { useI18N } from "@/core/i18n/i18n-provider";
 
-export const GetStarted: React.FC<{
-  i18n: Translation;
-}> = ({ i18n }) => {
-  const t = (key: keyof Translation) => i18n[key];
-
+export const GetStarted: React.FC = () => {
+  const { lang } = useI18N();
   return (
     <Box
       display="grid"
@@ -72,10 +71,10 @@ export const GetStarted: React.FC<{
           color="white"
           fontFamily="Plus Jakarta Sans"
         >
-          {t("home_get_started_title")}
+          {t("home_get_started_title", lang)}
         </Typography>
         <Typography fontSize="1rem" color="white">
-          {t("home_get_started_text")}
+          {t("home_get_started_text", lang)}
         </Typography>
         <Box display="flex" gap={4}>
           <AppStoreLink />

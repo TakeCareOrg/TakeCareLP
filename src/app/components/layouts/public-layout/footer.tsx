@@ -1,7 +1,8 @@
-import { Translation } from "@/core/i18n/i18n";
+
+import { t } from "@/core/i18n/i18n";
 import { useI18N } from "@/core/i18n/i18n-provider";
 import { useEnv } from "@/core/providers/env-provider";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -18,8 +19,7 @@ interface FooterLinkItem {
 
 export const Footer: React.FC = () => {
   const { contactEmail } = useEnv();
-  const { i18n } = useI18N();
-  const t = (key: keyof Translation) => i18n[key];
+  const { lang } = useI18N();
 
   const footerLinks: FooterLink[] = [
     {
@@ -36,6 +36,10 @@ export const Footer: React.FC = () => {
         {
           title: "Steps",
           url: "#steps",
+        },
+        {
+          title: "Privacy Policy",
+          url: "/privacy",
         },
       ],
     },
@@ -146,7 +150,7 @@ export const Footer: React.FC = () => {
           color="white"
           fontFamily="Plus Jakarta Sans"
         >
-          {t("footer_text")}
+          {t("footer_text", lang)}
         </Typography>
         <Box
           display="flex"
