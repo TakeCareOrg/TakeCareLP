@@ -49,7 +49,7 @@ export const en = {
       data: {
         title: "All your health data in one place now!",
         description:
-          "Heart rate, sleep, nutrition... all your health metrics gathered in elegant and fully customizable dashboards.",
+          "Track every metric that matters. From heart rate to sleep quality, nutrition visualize your complete health story with beautiful customizable dashboards.",
       },
       steps: {
         step1: {

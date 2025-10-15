@@ -1,12 +1,15 @@
 import { Hero } from "@/core/components/home/hero";
+import { Phones } from "@/core/components/home/phones";
+import { Steps } from "@/core/components/home/steps";
 import { DefaultLayout } from "@/core/components/layout";
-import Image from "next/image";
 
 export default function HomeScreen() {
   const locale = "en";
   return (
     <DefaultLayout locale={locale}>
       <Hero locale={locale} />
+      <Phones locale={locale} />
+      <Steps locale={locale} />
     </DefaultLayout>
   );
 }

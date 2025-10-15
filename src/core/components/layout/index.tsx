@@ -16,7 +16,9 @@ export const DefaultLayout: React.FC<PropsWithLocale> = ({
       >
         <Navbar locale={locale} />
 
-        <div className="w-full min-h-[calc(100vh-60px)]">{children}</div>
+        <div className="w-full min-h-[calc(100vh-60px)] grid gap-20 ">
+          {children}
+        </div>
       </div>
     </div>
   );
