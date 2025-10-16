@@ -1,11 +1,8 @@
 import { Navbar } from "./navbar";
-import { PropsWithLocale } from "../../types/app.types";
+import { PropsWithLang } from "../../types/app.types";
 import { Footer } from "./footer";
 
-export const DefaultLayout: React.FC<PropsWithLocale> = ({
-  children,
-  locale,
-}) => {
+export const DefaultLayout: React.FC<PropsWithLang> = ({ children, lang }) => {
   return (
     <div className="bg-[linear-gradient(180deg,#FFF_0%,#E9E9E9_100%)] ">
       <div
@@ -15,13 +12,13 @@ export const DefaultLayout: React.FC<PropsWithLocale> = ({
           backgroundSize: "cover",
         }}
       >
-        <Navbar locale={locale} />
+        <Navbar lang={lang} />
 
         <div className="w-full min-h-[calc(100vh-60px)] grid gap-20 ">
           {children}
         </div>
 
-        <Footer locale={locale} />
+        <Footer lang={lang} />
       </div>
     </div>
   );

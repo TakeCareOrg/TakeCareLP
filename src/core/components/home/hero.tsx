@@ -1,14 +1,14 @@
 import { PlayArrowIcon } from "@/core/assets/svg/play-arrow-icon";
 import { getI18n } from "@/core/i18n";
-import { PropsWithLocale } from "@/core/types/app.types";
+import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 
-export const Hero: React.FC<PropsWithLocale> = ({ locale }) => {
+export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
   const {
     pages: {
       home: { hero: t },
     },
-  } = getI18n(locale);
+  } = getI18n(lang);
 
   return (
     <div className="w-[95%] mx-auto pt-5 grid items-center gap-4">
@@ -18,7 +18,7 @@ export const Hero: React.FC<PropsWithLocale> = ({ locale }) => {
           <h1 className="font-extrabold leading-[80px] text-[64px] ">
             {t.title}
           </h1>
-          <div className="flex gap-3 mt-4 ">
+          <div className="flex gap-3 mt-4" suppressHydrationWarning>
             <input
               type="email"
               placeholder={t.form.placeholder}

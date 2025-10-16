@@ -1,18 +1,23 @@
 import { PropsWithChildren } from "react";
 
-export type AppLocale = string;
+export type AppLang = "en" | "fr";
 
 export interface PageParams<T = unknown, P = unknown> {
   params: Promise<
     {
-      locale: AppLocale;
+      lang: AppLang;
     } & T
   >;
 
   searchParams: Promise<P>;
 }
 
-export interface PropsWithLocale extends PropsWithChildren {
-  locale: AppLocale;
+export const AvailableLangs: Array<{ code: AppLang; name: string }> = [
+  { code: "en", name: "🇬🇧 English" },
+  { code: "fr", name: "🇫🇷 Français" },
+];
+
+export interface PropsWithLang extends PropsWithChildren {
+  lang: AppLang;
   className?: string;
 }

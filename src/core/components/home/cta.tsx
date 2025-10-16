@@ -1,13 +1,13 @@
 import { getI18n } from "@/core/i18n";
-import { PropsWithLocale } from "@/core/types/app.types";
+import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 
-export const CTA: React.FC<PropsWithLocale> = ({ locale }) => {
+export const CTA: React.FC<PropsWithLang> = ({ lang }) => {
   const {
     pages: {
       home: { cta: t },
     },
-  } = getI18n(locale);
+  } = getI18n(lang);
 
   return (
     <div

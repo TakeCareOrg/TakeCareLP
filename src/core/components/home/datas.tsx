@@ -1,13 +1,13 @@
 import { getI18n } from "@/core/i18n";
-import { PropsWithLocale } from "@/core/types/app.types";
+import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 
-export const Datas: React.FC<PropsWithLocale> = ({ locale }) => {
+export const Datas: React.FC<PropsWithLang> = ({ lang }) => {
   const {
     pages: {
       home: { data: t },
     },
-  } = getI18n(locale);
+  } = getI18n(lang);
 
   return (
     <div className="grid gap-10 ">

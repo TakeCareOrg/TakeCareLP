@@ -1,13 +1,13 @@
 import { getI18n } from "@/core/i18n";
-import { PropsWithLocale } from "@/core/types/app.types";
+import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 
-export const Phones: React.FC<PropsWithLocale> = ({ locale }) => {
+export const Phones: React.FC<PropsWithLang> = ({ lang }) => {
   const {
     pages: {
       home: { phones: t },
     },
-  } = getI18n(locale);
+  } = getI18n(lang);
 
   return (
     <div className="w-[95%] mx-auto pt-10 grid text-center items-center  rounded-[30px] border border-[rgba(239,239,243,0.5)] shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">

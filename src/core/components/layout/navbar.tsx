@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { PropsWithLocale } from "../../types/app.types";
+import { PropsWithLang } from "../../types/app.types";
 import { LogoIcon } from "../../assets/svg/logo-icon";
 import { getI18n } from "../../i18n";
+import { LangSelect } from "./lang-select";
 
-export const Navbar: React.FC<PropsWithLocale> = ({ locale }) => {
+export const Navbar: React.FC<PropsWithLang> = ({ lang }) => {
   const {
     layout: { navbar: t },
-  } = getI18n(locale);
+  } = getI18n(lang);
 
   return (
     <nav className="w-full h-[60px]">
@@ -29,7 +30,8 @@ export const Navbar: React.FC<PropsWithLocale> = ({ locale }) => {
             {t.contact}
           </Link>
         </div>
-        <p>English</p>
+
+        <LangSelect lang={lang} />
       </div>
     </nav>
   );

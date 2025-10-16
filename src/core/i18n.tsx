@@ -1,4 +1,4 @@
-import { AppLocale } from "@/core/types/app.types";
+import { AppLang } from "@/core/types/app.types";
 
 export const en = {
   pages: {
@@ -216,6 +216,6 @@ export const fr = {
 
 const translations: Record<string, Translation> = { en, fr };
 
-export const getI18n = (locale: AppLocale) => {
-  return translations?.[locale] || translations.en;
+export const getI18n = (lang: AppLang) => {
+  return translations?.[lang] || translations.en;
 };

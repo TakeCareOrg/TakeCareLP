@@ -1,17 +1,17 @@
 "use client";
 
 import { getI18n } from "@/core/i18n";
-import { PropsWithLocale } from "@/core/types/app.types";
+import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 import { Datas } from "./datas";
 import { useState, useEffect, useRef, Fragment } from "react";
 
-export const Steps: React.FC<PropsWithLocale> = ({ locale }) => {
+export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
   const {
     pages: {
       home: { steps: t },
     },
-  } = getI18n(locale);
+  } = getI18n(lang);
 
   const [currentStep, setCurrentStep] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -95,7 +95,7 @@ export const Steps: React.FC<PropsWithLocale> = ({ locale }) => {
 
   return (
     <div className="w-[95%] mx-auto py-20 grid text-center items-center rounded-[30px] border border-[rgba(239,239,243,0.5)] bg-white shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">
-      <Datas locale={locale} />
+      <Datas lang={lang} />
 
       <div className="grid gap-10 pt-10 px-[30px]">
         <div className="grid grid-cols-[1fr_160px_1fr] gap-3 mx-auto">
