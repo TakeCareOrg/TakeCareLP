@@ -10,7 +10,7 @@ export const Phones: React.FC<PropsWithLang> = ({ lang }) => {
   } = getI18n(lang);
 
   return (
-    <div className="w-[95%] mx-auto pt-10 grid text-center items-center  rounded-[30px] border border-[rgba(239,239,243,0.5)] shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">
+    <div className="w-[95%] mx-auto pt-10 grid text-center items-center  rounded-[30px] bg-white/30 border border-[rgba(239,239,243,0.5)] shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">
       <div className="grid gap-3 max-w-[700px] mx-auto">
         <h2 className="font-bold leading-[60px] text-[48px] text-center ">
           {t.title}
