@@ -1,0 +1,25 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "functions": {
+        "app/*.tsx": {
+        "memory": 3009,
+        "maxDuration": 30
+        },
+      "app/components/home/*.tsx": {
+        "memory": 3009,
+        "maxDuration": 30
+      },
+      "app/components/home/steps/*.tsx": {
+        "memory": 3009,
+        "maxDuration": 30
+      },
+      "app/components/layout/public-layout/*.tsx": {
+        "memory": 3009,
+        "maxDuration": 30
+      },
+      "app/components/privacy/*.tsx": {
+        "memory": 3009,
+        "maxDuration": 30
+      }
+    }
+  }
