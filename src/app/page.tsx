@@ -1,3 +1,4 @@
+import { CTA } from "@/core/components/home/cta";
 import { Hero } from "@/core/components/home/hero";
 import { Phones } from "@/core/components/home/phones";
 import { Steps } from "@/core/components/home/steps";
@@ -10,6 +11,7 @@ export default function HomeScreen() {
       <Hero locale={locale} />
       <Phones locale={locale} />
       <Steps locale={locale} />
+      <CTA locale={locale} />
     </DefaultLayout>
   );
 }
