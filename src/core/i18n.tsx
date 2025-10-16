@@ -24,24 +24,29 @@ export const en = {
           "Our vision: A world where better health is accessible to everyone",
       },
       stats: {
-        users: "+70 User tests",
-        precision: "95% Accuracy",
-        perso: "+300 Personal tests",
-        testimonies: "+15 Testimonials",
+        users_numbers: "+70",
+        users: "user tests",
+        precision_numbers: "95%",
+        precision: "accuracy",
+        perso_numbers: "+300",
+        perso: "personal tests",
+        testimonies_numbers: "+15",
+        testimonies: "testimonials",
       },
       chat: {
         example: {
           user: "Hey! My head started hurting this morning, and I’ve been coughing nonstop since last night.",
           bot: {
-            response:
-              "I’m sorry you’re feeling this way; that sounds unpleasant. Since you have a headache and persistent coughing, it could be something mild like a cold, flu, or respiratory infection, but it’s also important to consider things like COVID-19 or another viral or bacterial cause.",
+            response_1: "I’m sorry you’re feeling this way; that sounds unpleasant.",
+            response_2:
+              "Since you have a headache and persistent coughing, it could be something mild like a cold, flu, or respiratory infection, but it’s also important to consider things like COVID-19 or another viral or bacterial cause.",
             advice: "Here’s what to do:",
             list: {
-              item1: "Rest and drink fluids",
-              item2: "Try a COVID or flu test if possible",
-              item3:
-                "See a doctor if you get a high fever, shortness of breath, or your cough lasts more than a week",
+              item1: "• Rest and drink fluids",
+              item2: "• Try a COVID or flu test if possible",
             },
+            response_3:
+              "See a doctor if you get a high fever, shortness of breath, or your cough lasts more than a week",
             conclusion: "Okay, got it! Thank you, Doc!",
           },
         },
@@ -90,7 +95,7 @@ export const en = {
     footer: {
       description: "Innovating for accessible healthcare.",
       menu: "Menu",
-       home: "Home",
+      home: "Home",
       faq: "FAQ",
       contact: "Contact",
       policies: "Policies",
@@ -133,24 +138,31 @@ export const fr = {
           "Notre vision : un monde où une meilleure santé est accessible à tous",
       },
       stats: {
-        users: "+70 Tests d’utilisateurs",
-        precision: "95% Précision",
-        perso: "+300 Tests perso",
-        testimonies: "+15 Témoignages",
+        users_numbers: "+70",
+        users: "tests d’utilisateurs",
+        precision_numbers: "95%",
+        precision: "précision",
+        perso_numbers: "+300",
+        perso: "tests perso",
+        testimonies_numbers: "+15",
+        testimonies: "témoignages",
       },
       chat: {
         example: {
-          user: " Salut ! J'ai commencé à avoir mal à la tête ce matin, et je tousse sans arrêt depuis hier soir.",
+          user:
+            "Salut ! J’ai commencé à avoir mal à la tête ce matin, et je tousse sans arrêt depuis hier soir.",
           bot: {
-            response:
-              "Je suis désolé que vous ressentiez cela, cela semble désagréable. Puisque vous avez mal à la tête et une toux persistante, cela pourrait être quelque chose de bénin comme un rhume, une grippe, ou une infection respiratoire, mais il est aussi important d’envisager des choses comme la COVID-19 ou une autre cause virale ou bactérienne.",
+            response_1:
+              "Je suis désolé que vous ressentiez cela, cela semble désagréable.",
+            response_2:
+              "Puisque vous avez mal à la tête et une toux persistante, cela pourrait être quelque chose de bénin comme un rhume, une grippe, ou une infection respiratoire, mais il est aussi important d’envisager des causes comme la COVID-19 ou une autre infection virale ou bactérienne.",
             advice: "Voici ce qu’il faut faire :",
             list: {
-              item1: "Repos et buvez beaucoup de liquides",
-              item2: "Faites un test COVID ou grippe si possible",
-              item3:
-                "Consultez un médecin si vous avez une forte fièvre, un essoufflement, ou si votre toux dure plus d’une semaine",
+              item1: "• Reposez-vous et buvez beaucoup d'eau",
+              item2: "• Faites un test COVID ou grippe si possible",
             },
+            response_3:
+              "Consultez un médecin si vous avez une forte fièvre, un essoufflement, ou si votre toux dure plus d’une semaine",
             conclusion: "D’accord, compris ! Merci, Doc !",
           },
         },
@@ -177,7 +189,7 @@ export const fr = {
           title: "ÉTAPE 3",
           subtitle: "Toutes vos données de santé, centralisées et accessibles",
           description:
-            "Visualiser votre état de santé complet grâce à des tableaux de bord personnalisables et des graphiques intuitifs. Suivre les tendances, surveillez vos constantes vitales et obtenez des analyses IA pour mieux vous comprendre et prendre les bonnes décisions",
+            "Visualisez votre état de santé complet grâce à des tableaux de bord personnalisables et des graphiques intuitifs. Suivez les tendances, surveillez vos constantes vitales et obtenez des analyses IA pour mieux vous comprendre et prendre les bonnes décisions.",
         },
       },
       cta: {
@@ -204,7 +216,7 @@ export const fr = {
       policies: "Politiques",
       terms: "CCU",
       privacy: "Confidentialité",
-      cookie: "Paramètre des cookies",
+      cookie: "Paramètres des cookies",
       guidelines: "Directives",
       licenses: "Licences & Certifications",
       download: "Téléchargement",
