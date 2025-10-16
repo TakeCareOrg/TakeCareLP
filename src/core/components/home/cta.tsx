@@ -24,7 +24,7 @@ export const CTA: React.FC<PropsWithLang> = ({ lang }) => {
 
         <p className="max-w-[80%] mx-auto">{t.description}</p>
 
-        <button className="bg-white w-[488px] h-[100px] rounded-[30px] mx-auto hover:opacity-70 transition-opacity cursor-pointer">
+        <button className="bg-white w-[488px] h-[100px] rounded-[30px] mx-auto hover:bg-gray-100 cursor-pointer">
           <span className="font-semibold text-[20px] text-black">
             {t.button}
           </span>
