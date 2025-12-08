@@ -19,7 +19,7 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
-  const [isTypingInInput, setIsTypingInInput] = useState(false);
+  const [, setIsTypingInInput] = useState(false);
   const [isAiThinking, setIsAiThinking] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [animatingMessageIndex, setAnimatingMessageIndex] = useState(-1);
