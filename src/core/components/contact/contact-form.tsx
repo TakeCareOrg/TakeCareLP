@@ -3,33 +3,42 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-
-const contactFormSchema = z.object({
-  firstName: z
-    .string()
-    .min(2, "Le prénom doit contenir au moins 2 caractères")
-    .max(50, "Le prénom ne peut pas dépasser 50 caractères"),
-  lastName: z
-    .string()
-    .min(2, "Le nom doit contenir au moins 2 caractères")
-    .max(50, "Le nom ne peut pas dépasser 50 caractères"),
-  email: z
-    .string()
-    .email("Veuillez entrer une adresse email valide")
-    .min(1, "L'adresse email est requise"),
-  subject: z
-    .string()
-    .min(5, "Le sujet doit contenir au moins 5 caractères")
-    .max(100, "Le sujet ne peut pas dépasser 100 caractères"),
-  message: z
-    .string()
-    .min(10, "Le message doit contenir au moins 10 caractères")
-    .max(1000, "Le message ne peut pas dépasser 1000 caractères"),
-});
-
-type ContactFormData = z.infer<typeof contactFormSchema>;
+import { useLangProvider } from "@/core/components/providers/lang-provider";
+import { getI18n } from "@/core/i18n";
 
 export const ContactForm: React.FC = () => {
+  const { lang } = useLangProvider();
+
+  const {
+    pages: {
+      contact: { form: t },
+    },
+  } = getI18n(lang);
+
+  const contactFormSchema = z.object({
+    firstName: z
+      .string()
+      .min(2, t.firstName.error_min)
+      .max(50, t.firstName.error_max),
+    lastName: z
+      .string()
+      .min(2, t.lastName.error_min)
+      .max(50, t.lastName.error_max),
+    email: z
+      .string()
+      .email(t.email.error_invalid)
+      .min(1, t.email.error_required),
+    subject: z
+      .string()
+      .min(5, t.subject.error_min)
+      .max(100, t.subject.error_max),
+    message: z
+      .string()
+      .min(10, t.message.error_min)
+      .max(1000, t.message.error_max),
+  });
+
+  type ContactFormData = z.infer<typeof contactFormSchema>;
   const {
     register,
     handleSubmit,
@@ -74,18 +83,18 @@ export const ContactForm: React.FC = () => {
         <div>
           <label
             htmlFor="firstName"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-semibold text-gray-700 mb-2"
           >
-            Prénom <span className="text-red-500">*</span>
+            {t.firstName.label} <span className="text-red-500">*</span>
           </label>
           <input
             id="firstName"
             type="text"
             {...register("firstName")}
-            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition ${
-              errors.firstName ? "border-red-500" : "border-gray-300"
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition ${
+              errors.firstName ? "border-red-500" : "border-black-200"
             }`}
-            placeholder="Jean"
+            placeholder={t.firstName.placeholder}
           />
           {errors.firstName && (
             <p className="mt-1 text-sm text-red-500">
@@ -98,18 +107,18 @@ export const ContactForm: React.FC = () => {
         <div>
           <label
             htmlFor="lastName"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-semibold text-gray-700 mb-2"
           >
-            Nom <span className="text-red-500">*</span>
+            {t.lastName.label} <span className="text-red-500">*</span>
           </label>
           <input
             id="lastName"
             type="text"
             {...register("lastName")}
-            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition ${
-              errors.lastName ? "border-red-500" : "border-gray-300"
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition ${
+              errors.lastName ? "border-red-500" : "border-black-200"
             }`}
-            placeholder="Dupont"
+            placeholder={t.lastName.placeholder}
           />
           {errors.lastName && (
             <p className="mt-1 text-sm text-red-500">
@@ -123,18 +132,18 @@ export const ContactForm: React.FC = () => {
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-sm font-semibold text-gray-700 mb-2"
         >
-          Adresse email <span className="text-red-500">*</span>
+          {t.email.label} <span className="text-red-500">*</span>
         </label>
         <input
           id="email"
           type="email"
           {...register("email")}
-          className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition ${
-            errors.email ? "border-red-500" : "border-gray-300"
+          className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition ${
+            errors.email ? "border-red-500" : "border-black-200"
           }`}
-          placeholder="jean.dupont@exemple.fr"
+          placeholder={t.email.placeholder}
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
@@ -145,18 +154,18 @@ export const ContactForm: React.FC = () => {
       <div>
         <label
           htmlFor="subject"
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-sm font-semibold text-gray-700 mb-2"
         >
-          Sujet <span className="text-red-500">*</span>
+          {t.subject.label} <span className="text-red-500">*</span>
         </label>
         <input
           id="subject"
           type="text"
           {...register("subject")}
-          className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition ${
-            errors.subject ? "border-red-500" : "border-gray-300"
+          className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition ${
+            errors.subject ? "border-red-500" : "border-black-200"
           }`}
-          placeholder="Demande d'information"
+          placeholder={t.subject.placeholder}
         />
         {errors.subject && (
           <p className="mt-1 text-sm text-red-500">{errors.subject.message}</p>
@@ -167,18 +176,18 @@ export const ContactForm: React.FC = () => {
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-sm font-semibold text-gray-700 mb-2"
         >
-          Message <span className="text-red-500">*</span>
+          {t.message.label} <span className="text-red-500">*</span>
         </label>
         <textarea
           id="message"
           {...register("message")}
           rows={6}
-          className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none ${
-            errors.message ? "border-red-500" : "border-gray-300"
+          className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${
+            errors.message ? "border-red-500" : "border-black-200"
           }`}
-          placeholder="Votre message..."
+          placeholder={t.message.placeholder}
         />
         {errors.message && (
           <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
@@ -190,9 +199,9 @@ export const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-primary-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          className="w-full bg-black text-white font-medium py-3 px-6 rounded-lg hover:bg-black focus:ring-4 focus:ring-black disabled:opacity-50 disabled:cursor-not-allowed transition"
         >
-          {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+          {isSubmitting ? "Envoi en cours..." : t.button}
         </button>
       </div>
     </form>

@@ -84,6 +84,49 @@ export const en = {
         button: "Let’s go! I want to know more!",
       },
     },
+    contact: {
+      title: "Contact Us",
+      description:
+        "Have questions or need assistance? Reach out to our support team, and we’ll be happy to help!",
+      form: {
+        firstName: {
+          label: "First Name",
+          placeholder: "John",
+          error_min: "First name must be at least 2 characters long",
+          error_required: "First name is required",
+          error_max: "First name must be at most 50 characters long",
+        },
+        lastName: {
+          label: "Last Name",
+          placeholder: "Doe",
+          error_min: "Last name must be at least 2 characters long",
+          error_required: "Last name is required",
+          error_max: "Last name must be at most 50 characters long",
+        },
+        email: {
+          label: "Email Address",
+          placeholder: "john.doe@example.com",
+          error_invalid: "Please enter a valid email address",
+          error_required: "Email address is required",
+        },
+        subject: {
+          label: "Subject",
+          placeholder: "Inquiry about TakeCare AI",
+          error_min: "Subject must be at least 5 characters long",
+          error_required: "Subject is required",
+          error_max: "Subject must be at most 100 characters long",
+        },
+        message: {
+          label: "Message",
+          placeholder:
+            "Hello, I would like to know more about your services...",
+          error_min: "Message must be at least 10 characters long",
+          error_required: "Message is required",
+          error_max: "Message must be at most 1000 characters long",
+        },
+        button: "Send Message",
+      },
+    },
   },
   layout: {
     navbar: {
@@ -197,6 +240,49 @@ export const fr = {
         description:
           "Des milliers de personnes font déjà confiance à TakeCare AI pour leur santé !",
         button: "Je veux en savoir plus !",
+      },
+    },
+    contact: {
+      title: "Contactez-nous",
+      description:
+        "Des questions ou besoin d’aide ? Contactez notre équipe de support, nous sommes là pour vous aider !",
+      form: {
+        firstName: {
+          label: "Prénom",
+          placeholder: "John",
+          error_min: "Le prénom doit contenir au moins 2 caractères",
+          error_required: "Le prénom est requis",
+          error_max: "Le prénom ne peut pas dépasser 50 caractères",
+        },
+        lastName: {
+          label: "Nom",
+          placeholder: "Doe",
+          error_min: "Le nom doit contenir au moins 2 caractères",
+          error_required: "Le nom est requis",
+          error_max: "Le nom ne peut pas dépasser 50 caractères",
+        },
+        email: {
+          label: "Adresse e-mail",
+          placeholder: "john.doe@example.com",  
+          error_invalid: "Veuillez entrer une adresse email valide",
+          error_required: "L'adresse email est requise",
+        },
+        subject: {
+          label: "Sujet",
+          placeholder: "Demande concernant TakeCare AI",
+          error_min: "Le sujet doit contenir au moins 5 caractères",
+          error_required: "Le sujet est requis",
+          error_max: "Le sujet ne peut pas dépasser 100 caractères",
+        },
+        message: {
+          label: "Message",
+          placeholder:
+            "Bonjour, je souhaiterais en savoir plus sur vos services...",
+          error_min: "Le message doit contenir au moins 10 caractères",
+          error_required: "Le message est requis",
+          error_max: "Le message ne peut pas dépasser 1000 caractères",
+        },
+        button: "Envoyer le message",
       },
     },
   },
