@@ -19,7 +19,7 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
-  const [isTypingInInput, setIsTypingInInput] = useState(false);
+  const [, setIsTypingInInput] = useState(false);
   const [isAiThinking, setIsAiThinking] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [animatingMessageIndex, setAnimatingMessageIndex] = useState(-1);
@@ -106,24 +106,24 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
   };
 
   return (
-    <div className="w-[95%] mx-auto pt-10 grid text-center items-center backdrop-blur-[20px]">
-      <div className="grid grid-cols-2 gap-8 p-12">
+    <div className="w-[95%] mx-auto pt-10 px-4 md:px-0 grid text-center items-center backdrop-blur-[20px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 p-4 md:p-8 lg:p-12">
         {/* -------- LEFT SIDE : STATS -------- */}
         <div className="flex items-center justify-center">
-          <div className="grid grid-cols-2 gap-6 w-full max-w-[500px]">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full max-w-[500px]">
             {[
               { number: statsT.users_numbers, label: statsT.users },
               { number: statsT.precision_numbers, label: statsT.precision },
               { number: statsT.perso_numbers, label: statsT.perso },
               { number: statsT.testimonies_numbers, label: statsT.testimonies },
             ].map((s, i) => (
-              <div key={i} className="relative group w-[200px] h-[200px]">
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-[25px]" />
-                <div className="relative bg-white/90 backdrop-blur-sm rounded-[25px] p-8 shadow-lg h-full flex flex-col justify-center items-center">
-                  <p className="text-[48px] font-bold mb-2 text-black">
+              <div key={i} className="relative group w-full aspect-square max-w-[200px] mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-[20px] md:rounded-[25px]" />
+                <div className="relative bg-white/90 backdrop-blur-sm rounded-[20px] md:rounded-[25px] p-4 sm:p-6 md:p-8 shadow-lg h-full flex flex-col justify-center items-center">
+                  <p className="text-3xl sm:text-4xl md:text-[48px] font-bold mb-1 md:mb-2 text-black">
                     {s.number}
                   </p>
-                  <p className="text-[18px] font-medium text-black/80 text-center">
+                  <p className="text-sm sm:text-base md:text-[18px] font-medium text-black/80 text-center">
                     {s.label}
                   </p>
                 </div>
@@ -135,9 +135,9 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
         {/* -------- RIGHT SIDE : CHAT -------- */}
         <div className="flex items-center justify-center">
           <div className="relative w-full max-w-[600px]">
-            <div className="relative bg-black/20 backdrop-blur-md border border-white/10 rounded-[30px] p-8 shadow-xl">
+            <div className="relative bg-black/20 backdrop-blur-md border border-white/10 rounded-[20px] md:rounded-[30px] p-4 md:p-6 lg:p-8 shadow-xl">
               {/* Messages */}
-              <div className="space-y-4 overflow-y-auto h-[500px]">
+              <div className="space-y-4 overflow-y-auto h-[400px] sm:h-[450px] md:h-[500px]">
                 {messages.map((msg, index) => (
                   <div
                     key={index}
@@ -157,8 +157,8 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
                     <div
                       className={`rounded-2xl p-3 shadow-sm ${
                         msg.type === "user"
-                          ? "bg-gradient-to-r from-[#0066FF] to-[#D000FF] text-white rounded-br-md max-w-[380px]"
-                          : "bg-white/20 backdrop-blur-sm text-white rounded-bl-md max-w-[320px]"
+                          ? "bg-gradient-to-r from-[#0066FF] to-[#D000FF] text-white rounded-br-md max-w-[280px] sm:max-w-[320px] md:max-w-[380px]"
+                          : "bg-white/20 backdrop-blur-sm text-white rounded-bl-md max-w-[240px] sm:max-w-[280px] md:max-w-[320px]"
                       }`}
                       style={{
                         animation:
