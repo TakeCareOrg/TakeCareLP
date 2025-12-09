@@ -94,11 +94,34 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
   };
 
   return (
-    <div className="w-[95%] mx-auto py-20 grid text-center items-center rounded-[30px] border border-[rgba(239,239,243,0.5)] bg-white/30 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">
+    <div className="w-[95%] mx-auto py-10 md:py-16 lg:py-20 px-4 md:px-0 grid text-center items-center rounded-[30px] border border-[rgba(239,239,243,0.5)] bg-white/30 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">
       <Datas lang={lang} />
 
-      <div className="grid gap-10 pt-10 px-[30px]">
-        <div className="grid grid-cols-[1fr_160px_1fr] gap-3 mx-auto">
+      <div className="grid gap-6 md:gap-10 pt-6 md:pt-10 px-4 md:px-[30px]">
+        {/* Mobile: Stack layout */}
+        <div className="lg:hidden grid gap-8">
+          {stepsData.map((step, index) => (
+            <div key={index} className="grid gap-4 text-left">
+              <p className="font-bold text-lg md:text-xl text-black/70">
+                {step.title}
+              </p>
+              <h3 className="font-bold leading-tight text-2xl md:text-3xl">
+                {step.subtitle}
+              </h3>
+              <p className="font-normal text-base md:text-lg">{step.description}</p>
+              <Image
+                src={`/images/steps/${index + 1}.svg`}
+                alt={`step ${index + 1}`}
+                width={640}
+                height={530}
+                className="max-h-[300px] w-auto mx-auto"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: Original scroll layout */}
+        <div className="hidden lg:grid grid-cols-[1fr_160px_1fr] gap-3 mx-auto">
           <div
             ref={scrollContainerRef}
             className="overflow-hidden snap-y snap-mandatory"
