@@ -22,9 +22,11 @@ export const CTA: React.FC<PropsWithLang> = ({ lang }) => {
           {t.title}
         </h2>
 
-        <p className="max-w-[90%] sm:max-w-[80%] mx-auto text-sm sm:text-base md:text-lg px-4">{t.description}</p>
+        <p className="max-w-[90%] sm:max-w-[80%] mx-auto text-sm sm:text-base md:text-lg px-4">
+          {t.description}
+        </p>
 
-        <button className="bg-white w-full sm:w-auto sm:max-w-[488px] h-[70px] sm:h-[80px] md:h-[100px] rounded-[20px] md:rounded-[30px] mx-auto hover:bg-gray-100 cursor-pointer transition-colors px-6">
+        <button className="bg-white w-full sm:w-auto sm:max-w-[488px] h-[70px] sm:h-20 md:h-[100px] rounded-[20px] md:rounded-[30px] mx-auto hover:bg-gray-100 cursor-pointer transition-colors px-6">
           <span className="font-semibold text-base sm:text-lg md:text-[20px] text-black">
             {t.button}
           </span>

@@ -108,7 +108,9 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
               <h3 className="font-bold leading-tight text-2xl md:text-3xl">
                 {step.subtitle}
               </h3>
-              <p className="font-normal text-base md:text-lg">{step.description}</p>
+              <p className="font-normal text-base md:text-lg">
+                {step.description}
+              </p>
               <Image
                 src={`/images/steps/${index + 1}.svg`}
                 alt={`step ${index + 1}`}
@@ -135,7 +137,7 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
                 <p className="font-bold text-[26px] text-black/70">
                   {step.title}
                 </p>
-                <h3 className="font-bold leading-[40px] text-[32px]">
+                <h3 className="font-bold leading-10 text-[32px]">
                   {step.subtitle}
                 </h3>
                 <p className="font-normal text-[18px]">{step.description}</p>
@@ -194,7 +196,7 @@ const StepIndicator: React.FC<{
     <div className="flex flex-col justify-between items-center my-auto max-h-[300px] h-full ">
       {[...Array(totalSteps)].map((_, index) => (
         <Fragment key={index}>
-          {index > 0 && <div className="w-[2px] h-[34%] bg-black/20"></div>}
+          {index > 0 && <div className="w-0.5 h-[34%] bg-black/20"></div>}
 
           <div
             className={`size-[34px] rounded-full flex items-center justify-center text-[20px] font-semibold cursor-pointer transition-all duration-300 ${
