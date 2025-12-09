@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 
+export const dynamic = "force-dynamic";
+
 const contactFormSchema = z.object({
   firstName: z.string().min(2).max(50),
   lastName: z.string().min(2).max(50),
