@@ -20,7 +20,9 @@ export const Footer: React.FC<PropsWithLang> = ({ lang }) => {
               <LogoIcon />
               <p className="text-[22px] font-semibold">TakeCareAI</p>
             </Link>
-            <p className="text-[14px] sm:text-[12px] max-w-60">{t.description}</p>
+            <p className="text-[14px] sm:text-[12px] max-w-60">
+              {t.description}
+            </p>
           </div>
 
           {/* Links sections - single column on mobile, grid on desktop */}
@@ -28,47 +30,84 @@ export const Footer: React.FC<PropsWithLang> = ({ lang }) => {
             {/* Menu section */}
             <div className="grid gap-3 content-start">
               <h3 className="font-medium text-lg md:text-[16px]">{t.menu}</h3>
-              <Link href={"/"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"/"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.home}
               </Link>
-              <Link href={"/privacy"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"/privacy"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.privacy}
               </Link>
-              <Link href={"/faq"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"/faq"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.faq}
               </Link>
-              <Link href={"/contact"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"/contact"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.contact}
               </Link>
             </div>
 
             {/* Policies section */}
             <div className="grid gap-3 content-start">
-              <h3 className="font-medium text-lg md:text-[16px]">{t.policies}</h3>
-              <Link href={"/terms"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <h3 className="font-medium text-lg md:text-[16px]">
+                {t.policies}
+              </h3>
+              <Link
+                href={"/terms"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.terms}
               </Link>
-              <Link href={"/privacy"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"/privacy"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.privacy}
               </Link>
-              <Link href={"/cookies"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"/cookies"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.cookie}
               </Link>
-              <Link href={"/guidelines"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"/guidelines"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.guidelines}
               </Link>
-              <Link href={"/licenses"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"/licenses"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.licenses}
               </Link>
             </div>
 
             {/* Download section */}
             <div className="grid gap-3 content-start">
-              <h3 className="font-medium text-lg md:text-[16px]">{t.download}</h3>
-              <Link href={"#"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <h3 className="font-medium text-lg md:text-[16px]">
+                {t.download}
+              </h3>
+              <Link
+                href={"#"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.ios}
               </Link>
-              <Link href={"#"} className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity">
+              <Link
+                href={"#"}
+                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
+              >
                 {t.android}
               </Link>
             </div>
@@ -77,7 +116,7 @@ export const Footer: React.FC<PropsWithLang> = ({ lang }) => {
       </div>
 
       {/* Divider */}
-      <div className="w-[90%] mx-auto bg-black/20 h-[1px] my-6" />
+      <div className="w-[90%] mx-auto bg-black/20 h-px my-6" />
 
       {/* Bottom section - stack on small mobile, row on larger screens */}
       <div className="container mx-auto px-6 md:px-0 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 text-[14px] md:text-[12px]">

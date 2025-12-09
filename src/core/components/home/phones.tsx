@@ -17,7 +17,7 @@ export const Phones: React.FC<PropsWithLang> = ({ lang }) => {
         </h2>
 
         <div className="relative inline-block">
-          <p className="absolute inset-0 font-bold text-xl sm:text-2xl md:text-3xl lg:text-[38px] bg-[linear-gradient(90deg,#00C8FF_0%,#B300FF_50%,#FF0073_100%)] bg-clip-text text-transparent blur-[10px] opacity-70 translate-x-[4px]">
+          <p className="absolute inset-0 font-bold text-xl sm:text-2xl md:text-3xl lg:text-[38px] bg-[linear-gradient(90deg,#00C8FF_0%,#B300FF_50%,#FF0073_100%)] bg-clip-text text-transparent blur-[10px] opacity-70 translate-x-1">
             {t.colored_subtitle}
           </p>
 

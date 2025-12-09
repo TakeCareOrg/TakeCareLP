@@ -400,7 +400,7 @@ export const fr = {
   pages: {
     home: {
       hero: {
-        pretitle: "DIAGNOSTIQUER, RENDRE-VOUS, CONSULTER",
+        pretitle: "DIAGNOSTIQUER, RENDEZ-VOUS, CONSULTER",
         title: "Il est temps de prendre le contrôle de votre santé",
         form: {
           placeholder: "Adresse e-mail...",

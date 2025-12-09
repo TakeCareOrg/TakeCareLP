@@ -4,6 +4,7 @@ import { getI18n } from "@/core/i18n";
 import { PropsWithLang } from "@/core/types/app.types";
 import iaIcon from "@/core/assets/png/ia-icon.png";
 import userIcon from "@/core/assets/png/user-icon.png";
+import Image from "next/image";
 
 type Message = {
   type: "user" | "ai";
@@ -117,8 +118,11 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
               { number: statsT.perso_numbers, label: statsT.perso },
               { number: statsT.testimonies_numbers, label: statsT.testimonies },
             ].map((s, i) => (
-              <div key={i} className="relative group w-full aspect-square max-w-[200px] mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-[20px] md:rounded-[25px]" />
+              <div
+                key={i}
+                className="relative group w-full aspect-square max-w-[200px] mx-auto"
+              >
+                <div className="absolute inset-0 bg-linear-to-br from-pink-200 to-purple-200 rounded-[20px] md:rounded-[25px]" />
                 <div className="relative bg-white/90 backdrop-blur-sm rounded-[20px] md:rounded-[25px] p-4 sm:p-6 md:p-8 shadow-lg h-full flex flex-col justify-center items-center">
                   <p className="text-3xl sm:text-4xl md:text-[48px] font-bold mb-1 md:mb-2 text-black">
                     {s.number}
@@ -146,10 +150,12 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
                     }`}
                   >
                     {msg.type === "ai" && (
-                      <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center mr-2">
-                        <img
+                      <div className="w-10 h-10 shrink-0 flex items-center justify-center mr-2">
+                        <Image
                           src={iaIcon.src}
                           alt="AI"
+                          width={40}
+                          height={40}
                           className="w-full h-full rounded-full object-cover"
                         />
                       </div>
@@ -157,8 +163,8 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
                     <div
                       className={`rounded-2xl p-3 shadow-sm ${
                         msg.type === "user"
-                          ? "bg-gradient-to-r from-[#0066FF] to-[#D000FF] text-white rounded-br-md max-w-[280px] sm:max-w-[320px] md:max-w-[380px]"
-                          : "bg-white/20 backdrop-blur-sm text-white rounded-bl-md max-w-[240px] sm:max-w-[280px] md:max-w-[320px]"
+                          ? "bg-linear-to-r from-[#0066FF] to-[#D000FF] text-white rounded-br-md max-w-[280px] sm:max-w-[320px] md:max-w-[380px]"
+                          : "bg-white/20 backdrop-blur-sm text-white rounded-bl-md max-w-60 sm:max-w-[280px] md:max-w-[320px]"
                       }`}
                       style={{
                         animation:
@@ -178,10 +184,12 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
                       )}
                     </div>
                     {msg.type === "user" && (
-                      <div className="w-10 h-10 flex-shrink-0 ml-2">
-                        <img
+                      <div className="w-10 h-10 shrink-0 ml-2">
+                        <Image
                           src={userIcon.src}
                           alt="User"
+                          width={40}
+                          height={40}
                           className="w-full h-full rounded-full object-cover"
                         />
                       </div>
@@ -192,10 +200,12 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
                 {/* AI typing indicator */}
                 {isAiThinking && (
                   <div className="flex justify-start">
-                    <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center mr-2">
-                      <img
+                    <div className="w-10 h-10 shrink-0 flex items-center justify-center mr-2">
+                      <Image
                         src={iaIcon.src}
                         alt="AI"
+                        width={40}
+                        height={40}
                         className="w-full h-full rounded-full object-cover"
                       />
                     </div>
