@@ -1,7 +1,10 @@
+"use client";
+
 import { PlayArrowIcon } from "@/core/assets/svg/play-arrow-icon";
 import { getI18n } from "@/core/i18n";
 import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
+import { useState } from "react";
 
 export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
   const {
@@ -9,6 +12,46 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
       home: { hero: t },
     },
   } = getI18n(lang);
+
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Erreur lors de l'inscription");
+      }
+
+      setMessage("Merci ! Votre email a été enregistré avec succès.");
+      setEmail("");
+    } catch (error) {
+      setMessage(
+        error instanceof Error
+          ? error.message
+          : "Une erreur est survenue. Veuillez réessayer."
+      );
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setMessage("");
+      }, 5000);
+    }
+  };
 
   return (
     <div className="w-[95%] mx-auto pt-5 px-4 md:px-0 grid items-center gap-6 md:gap-4">
@@ -21,19 +64,37 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
           <h1 className="font-extrabold leading-tight sm:leading-snug md:leading-[60px] lg:leading-20 text-3xl sm:text-4xl md:text-5xl lg:text-[64px]">
             {t.title}
           </h1>
-          <div
+          <form
+            onSubmit={handleSubmit}
             className="flex flex-col sm:flex-row gap-3 mt-4"
             suppressHydrationWarning
           >
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder={t.form.placeholder}
               className="border-[0.5px] border-black/70 rounded-[10px] px-5 w-full sm:w-[350px] h-10"
+              required
+              disabled={isSubmitting}
             />
-            <button className="bg-black font-bold text-white w-full sm:w-40 h-10 rounded-[10px] hover:bg-black/90 transition-colors">
-              {t.form.button}
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-black font-bold text-white w-full sm:w-40 h-10 rounded-[10px] hover:bg-black/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? "..." : t.form.button}
             </button>
-          </div>
+          </form>
+          {message && (
+            <p
+              className={`text-sm ${
+                message.includes("succès") ? "text-green-600" : "text-red-600"
+              }`}
+            >
+              {message}
+            </p>
+          )}
         </div>
 
         <div className="grid content-start gap-1 text-center lg:text-left">
