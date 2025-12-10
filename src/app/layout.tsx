@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "TakeCare AI - Votre santé, notre priorité",
     description:
       "Votre compagnon IA de confiance pour le diagnostic et les conseils santé.",
-    images: `/alloappart-cover.jpg`,
+    images: `/images/takecare_metadata.png`,
   },
   robots: {
     index: true,
