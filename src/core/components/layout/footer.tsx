@@ -1,7 +1,7 @@
 import { LinkedinIcon } from "@/core/assets/svg/linkedin-icon";
-import { LogoIcon } from "@/core/assets/svg/logo-icon";
 import { getI18n } from "@/core/i18n";
 import { PropsWithLang } from "@/core/types/app.types";
+import Image from "next/image";
 import Link from "next/link";
 
 export const Footer: React.FC<PropsWithLang> = ({ lang }) => {
@@ -17,7 +17,7 @@ export const Footer: React.FC<PropsWithLang> = ({ lang }) => {
           {/* Logo and description */}
           <div className="grid gap-2 w-fit">
             <Link href={"/"} className="flex items-center gap-2 cursor-pointer">
-              <LogoIcon />
+              <Image src="/favicon.png" alt="logo" width={30} height={30} />
               <p className="text-[22px] font-semibold">TakeCareAI</p>
             </Link>
             <p className="text-[14px] sm:text-[12px] max-w-60">

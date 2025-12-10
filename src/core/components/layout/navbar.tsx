@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { PropsWithLang } from "../../types/app.types";
-import { LogoIcon } from "../../assets/svg/logo-icon";
 import { getI18n } from "../../i18n";
 import { LangSelect } from "./lang-select";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export const Navbar: React.FC<PropsWithLang> = ({ lang }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +24,8 @@ export const Navbar: React.FC<PropsWithLang> = ({ lang }) => {
           href={"/"}
           className="flex items-center gap-2 cursor-pointer z-50"
         >
-          <LogoIcon />
+          {/* <LogoIcon /> */}
+          <Image src="/favicon.png" alt="logo" width={30} height={30} />
           <p>TakeCareAI</p>
         </Link>
 
