@@ -3,6 +3,7 @@
 import { DefaultLayout } from "@/core/components/layout";
 import { useLangProvider } from "@/core/components/providers/lang-provider";
 import { getI18n } from "@/core/i18n";
+
 import { FaqAccordion } from "./faq-accordion";
 import { useState, useMemo } from "react";
 import { ChevronDown, Search } from "lucide-react";

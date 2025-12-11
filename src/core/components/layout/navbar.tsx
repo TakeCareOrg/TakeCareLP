@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { PropsWithLang } from "../../types/app.types";
-import { getI18n } from "../../i18n";
 import { LangSelect } from "./lang-select";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { getI18n } from "@/core/i18n";
 
 export const Navbar: React.FC<PropsWithLang> = ({ lang }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,7 +73,7 @@ export const Navbar: React.FC<PropsWithLang> = ({ lang }) => {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`absolute top-full left-0 right-0 bg-white/50 backdrop-blur-2xl z-40 md:hidden transition-all duration-300 overflow-hidden ${
+        className={`absolute top-full left-0 right-0 bg-white/50 backdrop-blur-2xl z-40 md:hidden transition-all duration-300 ${
           isMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >

@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-export type AppLang = "en" | "fr";
+export type AppLang = "en" | "fr" | "pt" | "es";
 
 export interface PageParams<T = unknown, P = unknown> {
   params: Promise<
@@ -14,7 +14,9 @@ export interface PageParams<T = unknown, P = unknown> {
 
 export const AvailableLangs: Array<{ code: AppLang; name: string }> = [
   { code: "en", name: "🇬🇧 English" },
+  { code: "es", name: "🇪🇸 Español" },
   { code: "fr", name: "🇫🇷 Français" },
+  { code: "pt", name: "🇵🇹 Português" },
 ];
 
 export interface PropsWithLang extends PropsWithChildren {

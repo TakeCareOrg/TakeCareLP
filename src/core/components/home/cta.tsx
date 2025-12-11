@@ -1,4 +1,5 @@
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 
 export const CTA: React.FC<PropsWithLang> = ({ lang }) => {

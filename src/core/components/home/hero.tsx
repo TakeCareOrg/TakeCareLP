@@ -2,6 +2,7 @@
 
 import { PlayArrowIcon } from "@/core/assets/svg/play-arrow-icon";
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 import { useState } from "react";

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 
 export const Vision: React.FC<PropsWithLang> = ({ lang }) => {

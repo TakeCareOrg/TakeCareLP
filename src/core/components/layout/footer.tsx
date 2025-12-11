@@ -1,5 +1,6 @@
 import { LinkedinIcon } from "@/core/assets/svg/linkedin-icon";
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 import Link from "next/link";

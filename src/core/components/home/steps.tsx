@@ -1,6 +1,7 @@
 "use client";
 
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 import { Datas } from "./datas";

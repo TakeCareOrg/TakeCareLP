@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Send } from "lucide-react";
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 import iaIcon from "@/core/assets/png/ia-icon.png";
 import userIcon from "@/core/assets/png/user-icon.png";
@@ -136,7 +137,8 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
   return (
     <div
       ref={sectionRef}
-      className="w-[95%] mx-auto pt-10 px-4 md:px-0 grid text-center items-center backdrop-blur-[20px]">
+      className="w-[95%] mx-auto pt-10 px-4 md:px-0 grid text-center items-center backdrop-blur-[20px]"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 p-4 md:p-8 lg:p-12">
         {/* -------- LEFT SIDE : STATS -------- */}
         <div className="flex items-center justify-center">
