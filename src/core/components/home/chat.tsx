@@ -24,7 +24,9 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
   const [isAiThinking, setIsAiThinking] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [animatingMessageIndex, setAnimatingMessageIndex] = useState(-1);
+  const [isVisible, setIsVisible] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const conversation: Message[] = [
     { type: "user", text: chatT.example.user },
@@ -35,6 +37,7 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
     { type: "user", text: chatT.example.bot.conclusion },
   ];
 
+  // Intersection Observer pour détecter la visibilité
   useEffect(() => {
     if (currentStep < conversation.length) {
       const currentMsg = conversation[currentStep];
@@ -47,7 +50,7 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
       }, 800);
       return () => clearTimeout(timer);
     }
-  }, [currentStep]);
+  }, [currentStep, isVisible]);
 
   const typeInInput = (text: string) => {
     setIsTypingInInput(true);
@@ -107,7 +110,9 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
   };
 
   return (
-    <div className="w-[95%] mx-auto pt-10 px-4 md:px-0 grid text-center items-center backdrop-blur-[20px]">
+    <div
+      ref={sectionRef}
+      className="w-[95%] mx-auto pt-10 px-4 md:px-0 grid text-center items-center backdrop-blur-[20px]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 p-4 md:p-8 lg:p-12">
         {/* -------- LEFT SIDE : STATS -------- */}
         <div className="flex items-center justify-center">
@@ -157,6 +162,7 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
                           width={40}
                           height={40}
                           className="w-full h-full rounded-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -191,6 +197,7 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
                           width={40}
                           height={40}
                           className="w-full h-full rounded-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -207,6 +214,7 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
                         width={40}
                         height={40}
                         className="w-full h-full rounded-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div

@@ -33,6 +33,7 @@ export const Phones: React.FC<PropsWithLang> = ({ lang }) => {
         width={500}
         height={300}
         className="w-[85%] sm:w-[75%] md:w-[70%] mx-auto h-auto "
+        priority
       />
     </div>
   );

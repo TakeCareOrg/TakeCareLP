@@ -126,6 +126,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
               width={256}
               height={64}
               className="w-auto mx-auto lg:mx-0"
+              loading="lazy"
             />
             <p className="text-center lg:text-left text-sm sm:text-base">
               {t.testimonies}
@@ -145,6 +146,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
           width={450}
           height={450}
           className="w-full max-w-[800px] h-auto mx-auto lg:mr-0"
+          loading="lazy"
         />
       </div>
     </div>

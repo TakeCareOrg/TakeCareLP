@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { getI18n } from "@/core/i18n";
 import { PropsWithLang } from "@/core/types/app.types";
 
 export const Vision: React.FC<PropsWithLang> = ({ lang }) => {
   const [visible, setVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const {
     pages: {
@@ -12,9 +13,27 @@ export const Vision: React.FC<PropsWithLang> = ({ lang }) => {
   } = getI18n(lang);
 
   useEffect(() => {
-    setVisible(false);
-    const timer = setTimeout(() => setVisible(true), 100);
-    return () => clearTimeout(timer);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+        }
+      },
+      {
+        threshold: 0.2, // Déclenche quand 20% du composant est visible
+        rootMargin: "0px",
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
   }, []);
 
   // Si vous utilisez la structure lines dans i18n
@@ -56,7 +75,10 @@ export const Vision: React.FC<PropsWithLang> = ({ lang }) => {
       })();
 
   return (
-    <div className="w-[95%] h-screen mx-auto pt-10 px-4 md:px-0 grid text-center items-center rounded-[30px] bg-white/30 border border-[rgba(239,239,243,0.5)] shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">
+    <div
+      ref={sectionRef}
+      className="w-[95%] h-screen mx-auto pt-10 px-4 md:px-0 grid text-center items-center rounded-[30px] bg-white/30 border border-[rgba(239,239,243,0.5)] shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]"
+    >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-[clamp(3rem,7vw,6rem)] font-extrabold leading-[1.15] tracking-tight">
           {lines.map((line, idx) => (

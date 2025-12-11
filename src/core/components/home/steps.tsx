@@ -117,6 +117,7 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
                 width={640}
                 height={530}
                 className="max-h-[300px] w-auto mx-auto"
+                loading="lazy"
               />
             </div>
           ))}
@@ -167,6 +168,7 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
                   width={640}
                   height={530}
                   className="max-h-[400px] w-auto mx-auto"
+                  loading="lazy"
                 />
               </div>
             ))}
