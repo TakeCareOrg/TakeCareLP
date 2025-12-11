@@ -12,7 +12,7 @@ export const Datas: React.FC<PropsWithLang> = ({ lang }) => {
   return (
     <div className="grid gap-10 ">
       <div className="grid gap-10 max-w-[550px] mx-auto">
-        <h2 className="font-bold leading-[40px] text-[40px] text-center ">
+        <h2 className="font-bold leading-10 text-[40px] text-center ">
           {t.title}
         </h2>
 

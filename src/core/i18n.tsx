@@ -141,6 +141,10 @@ export const en = {
       title: "Frequently Asked Questions",
       description:
         "Have questions? We've gathered answers to the most common questions to help you.",
+      search: {
+        placeholder: "Search for answers...",
+        noResults: "No results found for your search.",
+      },
       questions: {
         general: {
           title: "General",
@@ -545,6 +549,10 @@ export const fr = {
       title: "Foire aux questions",
       description:
         "Vous avez des questions ? Nous avons rassemblé les réponses aux questions les plus fréquentes pour vous aider.",
+      search: {
+        placeholder: "Rechercher des réponses...",
+        noResults: "Aucun résultat trouvé pour votre recherche.",
+      },
       questions: {
         general: {
           title: "Général",
