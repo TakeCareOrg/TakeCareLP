@@ -39,7 +39,31 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
 
   // Intersection Observer pour détecter la visibilité
   useEffect(() => {
-    if (currentStep < conversation.length) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.3, // Déclenche quand 30% du composant est visible
+        rootMargin: "0px",
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible && currentStep < conversation.length) {
       const currentMsg = conversation[currentStep];
       const timer = setTimeout(() => {
         if (currentMsg.type === "user") {
