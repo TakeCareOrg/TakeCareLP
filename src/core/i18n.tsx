@@ -1,3 +1,4 @@
+// i18n.ts
 import { AppLang } from "@/core/types/app.types";
 
 export const en = {
@@ -5,13 +6,13 @@ export const en = {
     home: {
       hero: {
         pretitle: "DIAGNOSE, BOOK APPOINTMENTS, CONSULT",
-        title: "It’s time to have the control on your health",
+        title: "It's time to have the control on your health",
         form: {
           placeholder: "Email address...",
           button: "Join our beta",
         },
         testimonies:
-          "Take a moment to read the testimonials from our users and discover how we’ve helped them.",
+          "Take a moment to read the testimonials from our users and discover how we've helped them.",
         stats: "Patients are diagnosed and monitored daily",
         button: "Learn more about us",
       },
@@ -22,6 +23,14 @@ export const en = {
       vision: {
         title:
           "Our vision: A world where better health is accessible to everyone",
+        // Optionnel : Si vous voulez structurer les lignes directement dans i18n
+        lines: {
+          line1: "Our vision: A world",
+          line2: "where better",
+          line3: "health is accessible",
+          line4: "to everyone",
+          coloredWord: "health",
+        },
       },
       stats: {
         users_numbers: "+70",
@@ -35,13 +44,13 @@ export const en = {
       },
       chat: {
         example: {
-          user: "Hey! My head started hurting this morning, and I’ve been coughing nonstop since last night.",
+          user: "Hey! My head started hurting this morning, and I've been coughing nonstop since last night.",
           bot: {
             response_1:
               "I’m sorry you’re feeling this way; that sounds unpleasant.",
             response_2:
-              "Since you have a headache and persistent coughing, it could be something mild like a cold, flu, or respiratory infection, but it’s also important to consider things like COVID-19 or another viral or bacterial cause.",
-            advice: "Here’s what to do:",
+              "Since you have a headache and persistent coughing, it could be something mild like a cold, flu, or respiratory infection, but it's also important to consider things like COVID-19 or another viral or bacterial cause.",
+            advice: "Here's what to do:",
             list: {
               item1: "• Rest and drink fluids",
               item2: "• Try a COVID or flu test if possible",
@@ -419,10 +428,18 @@ export const fr = {
       vision: {
         title:
           "Notre vision : un monde où une meilleure santé est accessible à tous",
+        // Optionnel : Si vous voulez structurer les lignes directement dans i18n
+        lines: {
+          line1: "Notre vision : un monde",
+          line2: "où une meilleure",
+          line3: "santé est accessible",
+          line4: "à tous",
+          coloredWord: "santé",
+        },
       },
       stats: {
         users_numbers: "+70",
-        users: "tests d’utilisateurs",
+        users: "tests d'utilisateurs",
         precision_numbers: "95%",
         precision: "précision",
         perso_numbers: "+300",
@@ -437,15 +454,15 @@ export const fr = {
             response_1:
               "Je suis désolé que vous ressentiez cela, cela semble désagréable.",
             response_2:
-              "Puisque vous avez mal à la tête et une toux persistante, cela pourrait être quelque chose de bénin comme un rhume, une grippe, ou une infection respiratoire, mais il est aussi important d’envisager des causes comme la COVID-19 ou une autre infection virale ou bactérienne.",
-            advice: "Voici ce qu’il faut faire :",
+              "Puisque vous avez mal à la tête et une toux persistante, cela pourrait être quelque chose de bénin comme un rhume, une grippe, ou une infection respiratoire, mais il est aussi important d'envisager des causes comme la COVID-19 ou une autre infection virale ou bactérienne.",
+            advice: "Voici ce qu'il faut faire :",
             list: {
               item1: "• Reposez-vous et buvez beaucoup d'eau",
               item2: "• Faites un test COVID ou grippe si possible",
             },
             response_3:
-              "Consultez un médecin si vous avez une forte fièvre, un essoufflement, ou si votre toux dure plus d’une semaine",
-            conclusion: "D’accord, compris ! Merci, Doc !",
+              "Consultez un médecin si vous avez une forte fièvre, un essoufflement, ou si votre toux dure plus d'une semaine",
+            conclusion: "D'accord, compris ! Merci, Doc !",
           },
         },
       },
@@ -475,7 +492,7 @@ export const fr = {
         },
       },
       cta: {
-        title: "Envie d’en savoir plus sur TakeCare ? Réservez une démo !",
+        title: "Envie d'en savoir plus sur TakeCare ? Réservez une démo !",
         description:
           "Des milliers de personnes font déjà confiance à TakeCare AI pour leur santé !",
         button: "Je veux en savoir plus !",
