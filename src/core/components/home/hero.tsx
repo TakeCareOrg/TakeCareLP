@@ -54,7 +54,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
   };
 
   return (
-    <div className="w-[95%] mx-auto pt-5 px-4 md:px-0 grid items-center gap-6 md:gap-4">
+    <div className="w-[95%] h-screen mx-auto pt-5 px-4 md:px-0 grid items-center gap-6 md:gap-4">
       {/* Top Section */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] justify-between gap-6 lg:gap-6">
         <div className="grid gap-3">
@@ -62,7 +62,12 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
             {t.pretitle}
           </p>
           <h1 className="font-extrabold leading-tight sm:leading-snug md:leading-[60px] lg:leading-20 text-3xl sm:text-4xl md:text-5xl lg:text-[64px]">
-            {t.title}
+            {/* split in 2 lines */}
+            {t.title.split("\n").map((line, index) => (
+              <span key={index} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
           <form
             onSubmit={handleSubmit}
@@ -102,7 +107,11 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
             100k +
           </p>
           <p className="font-medium text-lg sm:text-xl md:text-[22px] leading-7">
-            {t.stats}
+            {t.stats.split("\n").map((line, index) => (
+              <span key={index} className="block">
+                {line}
+              </span>
+            ))}
           </p>
         </div>
       </div>
@@ -135,7 +144,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
           alt="hero - testimonies illustrations"
           width={450}
           height={450}
-          className="w-full lg:w-[90%] max-w-[800px] h-auto mx-auto lg:ml-auto"
+          className="w-full max-w-[800px] h-auto mx-auto lg:mr-0"
         />
       </div>
     </div>

@@ -6,14 +6,14 @@ export const en = {
     home: {
       hero: {
         pretitle: "DIAGNOSE, BOOK APPOINTMENTS, CONSULT",
-        title: "It's time to have the control on your health",
+        title: "It’s time to have the \n control on your health",
         form: {
           placeholder: "Email address...",
           button: "Join our beta",
         },
         testimonies:
-          "Take a moment to read the testimonials from our users and discover how we've helped them.",
-        stats: "Patients are diagnosed and monitored daily",
+          "Take a moment to read the testimonials from our users and discover how we’ve helped them.",
+        stats: "Patients are diagnosed \n and monitored daily",
         button: "Learn more about us",
       },
       phones: {
@@ -410,14 +410,14 @@ export const fr = {
     home: {
       hero: {
         pretitle: "DIAGNOSTIQUER, RENDEZ-VOUS, CONSULTER",
-        title: "Il est temps de prendre le contrôle de votre santé",
+        title: "Il est temps de prendre le \n contrôle de votre santé",
         form: {
           placeholder: "Adresse e-mail...",
           button: "Rejoindre notre bêta",
         },
         testimonies:
           "Prenez le temps de lire les témoignages de nos utilisateurs et découvrez comment nous les avons aidés.",
-        stats: "sont diagnostiqués et suivis quotidiennement",
+        stats: "sont diagnostiqués et \n suivis quotidiennement",
         button: "En savoir plus sur nous",
       },
       phones: {
