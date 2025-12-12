@@ -377,6 +377,143 @@ export const en = {
         },
       },
     },
+    terms: {
+      title: "Terms of Service",
+      lastUpdate: "Last updated: December 2025",
+      sections: {
+        acceptance: {
+          title: "1. Acceptance of Terms",
+          content:
+            "By accessing and using TakeCare AI, you agree to be bound by these terms of service. If you do not accept these terms, please do not use our service.",
+        },
+        service: {
+          title: "2. Service Description",
+          content: "TakeCare AI is a digital health platform that provides:",
+          items: [
+            "General health and educational information",
+            "An artificial intelligence-based virtual assistant",
+            "Wellness tracking and management tools",
+            "Personalized recommendations based on your data",
+          ],
+        },
+        userAccount: {
+          title: "3. User Account",
+          content:
+            "You are responsible for maintaining the confidentiality of your login credentials and all activities under your account. You must immediately notify us of any unauthorized use of your account. You must provide accurate and up-to-date information when creating your account.",
+        },
+        medicalDisclaimer: {
+          title: "4. Medical Disclaimer",
+          content:
+            "TakeCare AI does not replace professional medical advice. The information provided is for informational purposes only and does not constitute a medical diagnosis. In case of medical emergency, contact emergency services immediately. Always consult a qualified healthcare professional for any questions regarding your health condition.",
+        },
+        intellectualProperty: {
+          title: "5. Intellectual Property",
+          content:
+            "All content on TakeCare AI, including but not limited to text, graphics, logos, images, and software, is the property of TakeCare AI or its licensors and is protected by intellectual property laws. Any unauthorized reproduction, distribution, or use is strictly prohibited.",
+        },
+        liability: {
+          title: "6. Limitation of Liability",
+          content:
+            "TakeCare AI shall not be liable for any direct or indirect damages resulting from the use or inability to use the service, including but not limited to data loss, loss of profits, or business interruption. While we strive to maintain continuous service availability, we do not guarantee uninterrupted access.",
+        },
+        modifications: {
+          title: "7. Modifications to Terms",
+          content:
+            "We reserve the right to modify these terms at any time. Changes will take effect upon publication on the site. Your continued use of the service after publication of changes constitutes your acceptance of the new terms.",
+        },
+        law: {
+          title: "8. Governing Law",
+          content:
+            "These terms are governed by French law. Any dispute relating to the interpretation or execution of these terms shall be subject to the jurisdiction of the competent courts of Paris, France.",
+        },
+        contact: {
+          title: "9. Contact",
+          content:
+            "For any questions regarding these terms of service, you can contact us through our contact page or at: contact@takecare.ai",
+        },
+      },
+    },
+    privacy: {
+      title: "Privacy Policy",
+      lastUpdate: "Last updated: December 2025",
+      sections: {
+        intro: {
+          title: "1. Introduction",
+          content:
+            "At TakeCare AI, we take the protection of your personal data very seriously. This privacy policy explains how we collect, use, protect, and share your personal information when using our service.",
+        },
+        dataCollection: {
+          title: "2. Data Collection",
+          content: "We collect the following types of data:",
+          items: [
+            "Account information: first name, last name, email address, date of birth",
+            "Health data: symptoms, medical history that you voluntarily share",
+            "Usage data: interactions with the application, connection logs",
+            "Technical data: IP address, browser type, operating system",
+            "Connected device data: if you connect health devices (smartwatch, etc.)",
+          ],
+        },
+        dataUsage: {
+          title: "3. Data Usage",
+          content: "We use your data to:",
+          items: [
+            "Provide and improve our services",
+            "Personalize your user experience",
+            "Analyze platform usage",
+            "Communicate with you regarding your account and our services",
+            "Ensure security and prevent fraud",
+            "Comply with our legal obligations",
+          ],
+        },
+        dataSharing: {
+          title: "4. Data Sharing",
+          content:
+            "We never sell your personal data. We only share your data with your explicit consent or when required by law. Third-party service providers we work with are contractually bound to protect your data and may only use it for the purposes for which they were mandated.",
+        },
+        dataSecurity: {
+          title: "5. Data Security",
+          content:
+            "We implement appropriate technical and organizational security measures to protect your data against unauthorized access, modification, disclosure, or destruction. Your data is encrypted in transit and at rest. We conduct regular security audits.",
+        },
+        userRights: {
+          title: "6. Your Rights",
+          content: "In accordance with GDPR, you have the following rights:",
+          items: [
+            "Right of access: obtain a copy of your personal data",
+            "Right of rectification: correct your inaccurate data",
+            "Right to erasure: request deletion of your data",
+            "Right to portability: receive your data in a structured format",
+            "Right to object: object to the processing of your data",
+            "Right to restriction: request limitation of processing",
+          ],
+        },
+        cookies: {
+          title: "7. Cookies and Similar Technologies",
+          content:
+            "We use cookies and similar technologies to improve your experience, analyze service usage, and personalize content. You can manage your cookie preferences through your browser settings or our cookie manager.",
+        },
+        thirdParty: {
+          title: "8. Third-Party Services",
+          content:
+            "Our service may contain links to third-party websites. We are not responsible for the privacy practices of these sites. We encourage you to read their privacy policies before providing them with personal information.",
+        },
+        dataRetention: {
+          title: "9. Data Retention",
+          content:
+            "We retain your personal data for as long as necessary to provide our services and comply with our legal obligations. When you delete your account, your data is erased within 30 days, unless there is a legal obligation to retain it.",
+        },
+        changes: {
+          title: "10. Policy Changes",
+          content:
+            "We reserve the right to modify this privacy policy at any time. We will inform you of any significant changes by email or through an in-app notification. The last update date is indicated at the top of this policy.",
+        },
+        contact: {
+          title: "11. Contact",
+          content:
+            "For any questions regarding this privacy policy or to exercise your rights, you can contact us at: privacy@takecare.ai or through our contact page.",
+        },
+      },
+    },
   },
   layout: {
     navbar: {

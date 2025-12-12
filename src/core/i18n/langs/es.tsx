@@ -380,6 +380,144 @@ export const es = {
         },
       },
     },
+    terms: {
+      title: "Términos y Condiciones de Uso",
+      lastUpdate: "Última actualización: Diciembre 2025",
+      sections: {
+        acceptance: {
+          title: "1. Aceptación de los términos",
+          content:
+            "Al acceder y utilizar TakeCare AI, acepta estar sujeto a estos términos y condiciones de uso. Si no acepta estos términos, por favor no utilice nuestro servicio.",
+        },
+        service: {
+          title: "2. Descripción del servicio",
+          content:
+            "TakeCare AI es una plataforma de salud digital que proporciona:",
+          items: [
+            "Información general y educativa sobre salud",
+            "Un asistente virtual basado en inteligencia artificial",
+            "Herramientas de seguimiento y gestión del bienestar",
+            "Recomendaciones personalizadas basadas en sus datos",
+          ],
+        },
+        userAccount: {
+          title: "3. Cuenta de usuario",
+          content:
+            "Usted es responsable de mantener la confidencialidad de sus credenciales de acceso y de todas las actividades realizadas bajo su cuenta. Debe informarnos inmediatamente de cualquier uso no autorizado de su cuenta. Debe proporcionar información precisa y actualizada al crear su cuenta.",
+        },
+        medicalDisclaimer: {
+          title: "4. Aviso médico",
+          content:
+            "TakeCare AI no sustituye el consejo médico profesional. La información proporcionada es únicamente con fines informativos y no constituye un diagnóstico médico. En caso de emergencia médica, contacte inmediatamente con los servicios de emergencia. Siempre consulte a un profesional de la salud cualificado para cualquier pregunta sobre su estado de salud.",
+        },
+        intellectualProperty: {
+          title: "5. Propiedad intelectual",
+          content:
+            "Todo el contenido presente en TakeCare AI, incluyendo pero no limitándose a textos, gráficos, logotipos, imágenes y software, es propiedad de TakeCare AI o de sus licenciantes y está protegido por las leyes de propiedad intelectual. Cualquier reproducción, distribución o uso no autorizado está estrictamente prohibido.",
+        },
+        liability: {
+          title: "6. Limitación de responsabilidad",
+          content:
+            "TakeCare AI no será responsable de los daños directos o indirectos resultantes del uso o de la imposibilidad de usar el servicio, incluyendo pero no limitándose a pérdida de datos, pérdida de beneficios o interrupción de actividad. Nos esforzamos por mantener el servicio accesible permanentemente, pero no garantizamos disponibilidad sin interrupciones.",
+        },
+        modifications: {
+          title: "7. Modificaciones de los términos",
+          content:
+            "Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor desde su publicación en el sitio. Su uso continuado del servicio después de la publicación de las modificaciones constituye su aceptación de los nuevos términos.",
+        },
+        law: {
+          title: "8. Ley aplicable",
+          content:
+            "Estos términos se rigen por la ley francesa. Cualquier disputa relacionada con la interpretación o ejecución de estos términos estará sujeta a los tribunales competentes de París, Francia.",
+        },
+        contact: {
+          title: "9. Contacto",
+          content:
+            "Para cualquier pregunta sobre estos términos y condiciones de uso, puede contactarnos a través de nuestra página de contacto o en la dirección: contact@takecare.ai",
+        },
+      },
+    },
+    privacy: {
+      title: "Política de Privacidad",
+      lastUpdate: "Última actualización: Diciembre 2025",
+      sections: {
+        intro: {
+          title: "1. Introducción",
+          content:
+            "En TakeCare AI, nos tomamos muy en serio la protección de sus datos personales. Esta política de privacidad explica cómo recopilamos, utilizamos, protegemos y compartimos su información personal en el contexto del uso de nuestro servicio.",
+        },
+        dataCollection: {
+          title: "2. Datos recopilados",
+          content: "Recopilamos los siguientes tipos de datos:",
+          items: [
+            "Información de cuenta: nombre, apellido, correo electrónico, fecha de nacimiento",
+            "Datos de salud: síntomas, historial médico que comparte voluntariamente",
+            "Datos de uso: interacciones con la aplicación, registros de conexión",
+            "Datos técnicos: dirección IP, tipo de navegador, sistema operativo",
+            "Datos de dispositivos conectados: si conecta dispositivos de salud (smartwatch, etc.)",
+          ],
+        },
+        dataUsage: {
+          title: "3. Uso de los datos",
+          content: "Utilizamos sus datos para:",
+          items: [
+            "Proporcionar y mejorar nuestros servicios",
+            "Personalizar su experiencia de usuario",
+            "Analizar el uso de nuestra plataforma",
+            "Comunicarnos con usted sobre su cuenta y nuestros servicios",
+            "Garantizar la seguridad y prevenir el fraude",
+            "Cumplir con nuestras obligaciones legales",
+          ],
+        },
+        dataSharing: {
+          title: "4. Compartir datos",
+          content:
+            "Nunca vendemos sus datos personales. Solo compartimos sus datos con su consentimiento explícito o cuando lo requiera la ley. Los proveedores de servicios externos con los que trabajamos están contractualmente obligados a proteger sus datos y solo pueden usarlos para los fines para los que fueron contratados.",
+        },
+        dataSecurity: {
+          title: "5. Seguridad de los datos",
+          content:
+            "Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger sus datos contra cualquier acceso, modificación, divulgación o destrucción no autorizados. Sus datos están cifrados en tránsito y en reposo. Realizamos auditorías de seguridad regulares.",
+        },
+        userRights: {
+          title: "6. Sus derechos",
+          content: "De acuerdo con el RGPD, tiene los siguientes derechos:",
+          items: [
+            "Derecho de acceso: obtener una copia de sus datos personales",
+            "Derecho de rectificación: corregir sus datos inexactos",
+            "Derecho de supresión: solicitar la eliminación de sus datos",
+            "Derecho a la portabilidad: recibir sus datos en un formato estructurado",
+            "Derecho de oposición: oponerse al tratamiento de sus datos",
+            "Derecho de limitación: solicitar la limitación del tratamiento",
+          ],
+        },
+        cookies: {
+          title: "7. Cookies y tecnologías similares",
+          content:
+            "Utilizamos cookies y tecnologías similares para mejorar su experiencia, analizar el uso del servicio y personalizar el contenido. Puede gestionar sus preferencias de cookies a través de la configuración de su navegador o nuestro gestor de cookies.",
+        },
+        thirdParty: {
+          title: "8. Servicios de terceros",
+          content:
+            "Nuestro servicio puede contener enlaces a sitios web de terceros. No somos responsables de las prácticas de privacidad de estos sitios. Le recomendamos leer sus políticas de privacidad antes de proporcionarles información personal.",
+        },
+        dataRetention: {
+          title: "9. Conservación de datos",
+          content:
+            "Conservamos sus datos personales durante el tiempo necesario para proporcionar nuestros servicios y cumplir con nuestras obligaciones legales. Cuando elimina su cuenta, sus datos se borran en un plazo de 30 días, salvo obligación legal de conservación.",
+        },
+        changes: {
+          title: "10. Modificaciones de la política",
+          content:
+            "Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento. Le informaremos de cualquier cambio significativo por correo electrónico o mediante una notificación en la aplicación. La fecha de última actualización se indica en la parte superior de esta política.",
+        },
+        contact: {
+          title: "11. Contacto",
+          content:
+            "Para cualquier pregunta sobre esta política de privacidad o para ejercer sus derechos, puede contactarnos en: privacy@takecare.ai o a través de nuestra página de contacto.",
+        },
+      },
+    },
   },
   layout: {
     navbar: {

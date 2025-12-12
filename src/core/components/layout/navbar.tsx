@@ -38,12 +38,6 @@ export const Navbar: React.FC<PropsWithLang> = ({ lang }) => {
             {t.home}
           </Link>
           <Link
-            href={"/privacy"}
-            className="cursor-pointer hover:opacity-70 transition-opacity"
-          >
-            {t.privacy}
-          </Link>
-          <Link
             href={"/faq"}
             className="cursor-pointer hover:opacity-70 transition-opacity"
           >
@@ -84,13 +78,6 @@ export const Navbar: React.FC<PropsWithLang> = ({ lang }) => {
             onClick={closeMenu}
           >
             {t.home}
-          </Link>
-          <Link
-            href={"/privacy"}
-            className="cursor-pointer hover:text-white/70 transition-colors w-full py-2"
-            onClick={closeMenu}
-          >
-            {t.privacy}
           </Link>
           <Link
             href={"/faq"}
