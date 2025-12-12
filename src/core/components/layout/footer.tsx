@@ -1,5 +1,6 @@
 import { LinkedinIcon } from "@/core/assets/svg/linkedin-icon";
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,12 +38,6 @@ export const Footer: React.FC<PropsWithLang> = ({ lang }) => {
                 {t.home}
               </Link>
               <Link
-                href={"/privacy"}
-                className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
-              >
-                {t.privacy}
-              </Link>
-              <Link
                 href={"/faq"}
                 className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
               >
@@ -73,7 +68,7 @@ export const Footer: React.FC<PropsWithLang> = ({ lang }) => {
               >
                 {t.privacy}
               </Link>
-              <Link
+              {/* <Link
                 href={"/cookies"}
                 className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
               >
@@ -90,7 +85,7 @@ export const Footer: React.FC<PropsWithLang> = ({ lang }) => {
                 className="text-[15px] md:text-[12px] hover:opacity-70 transition-opacity"
               >
                 {t.licenses}
-              </Link>
+              </Link> */}
             </div>
 
             {/* Download section */}

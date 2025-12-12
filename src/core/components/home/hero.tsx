@@ -2,6 +2,7 @@
 
 import { PlayArrowIcon } from "@/core/assets/svg/play-arrow-icon";
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 import { useState } from "react";
@@ -54,15 +55,20 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
   };
 
   return (
-    <div className="w-[95%] mx-auto pt-5 px-4 md:px-0 grid items-center gap-6 md:gap-4">
+    <div className="w-[95%] h-[calc(100vh-60px)] mx-auto pt-5 px-4 md:px-0 grid items-center gap-4 md:gap-3">
       {/* Top Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] justify-between gap-6 lg:gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] justify-between gap-4 lg:gap-6">
         <div className="grid gap-3">
           <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-[26px]">
             {t.pretitle}
           </p>
           <h1 className="font-extrabold leading-tight sm:leading-snug md:leading-[60px] lg:leading-20 text-3xl sm:text-4xl md:text-5xl lg:text-[64px]">
-            {t.title}
+            {/* split in 2 lines */}
+            {t.title.split("\n").map((line, index) => (
+              <span key={index} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
           <form
             onSubmit={handleSubmit}
@@ -81,7 +87,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-black font-bold text-white w-full sm:w-40 h-10 rounded-[10px] hover:bg-black/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-black font-bold mx-auto sm:mx-0 text-white w-fit px-2 h-10 rounded-[10px] hover:bg-black/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "..." : t.form.button}
             </button>
@@ -102,28 +108,33 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
             100k +
           </p>
           <p className="font-medium text-lg sm:text-xl md:text-[22px] leading-7">
-            {t.stats}
+            {t.stats.split("\n").map((line, index) => (
+              <span key={index} className="block">
+                {line}
+              </span>
+            ))}
           </p>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] justify-between gap-8 lg:gap-0">
-        <div className="flex flex-col h-full justify-between gap-6 lg:gap-0">
-          <div className="grid gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] justify-between gap-6 lg:gap-0">
+        <div className="flex flex-col h-full justify-between gap-4 lg:gap-0">
+          <div className="grid gap-2">
             <Image
               src="/images/avatars.png"
               alt="avatars"
               width={256}
               height={64}
               className="w-auto mx-auto lg:mx-0"
+              loading="lazy"
             />
             <p className="text-center lg:text-left text-sm sm:text-base">
               {t.testimonies}
             </p>
           </div>
           <button className="bg-black rounded-[50px] px-5 py-2.5 w-fit flex items-center mx-auto lg:mx-0 hover:bg-black/90 transition-colors">
-            <PlayArrowIcon className="inline-block mr-2 fill-white size-[30px] -ml-2" />
+            <PlayArrowIcon className="inline-block mr-2 fill-white size-[30px] -ml-2 rotate-90 " />
             <p className="text-white font-semibold text-sm sm:text-base">
               {t.button}
             </p>
@@ -132,10 +143,11 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
 
         <Image
           src="/images/illustrations.png"
-          alt="hero - testimonies illustrations"
+          alt="hero - testimonies illustration"
           width={450}
           height={450}
-          className="w-full lg:w-[90%] max-w-[800px] h-auto mx-auto lg:ml-auto"
+          className="w-full max-w-[700px] h-auto mx-auto lg:mr-0"
+          loading="lazy"
         />
       </div>
     </div>

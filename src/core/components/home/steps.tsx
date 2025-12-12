@@ -1,6 +1,7 @@
 "use client";
 
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 import Image from "next/image";
 import { Datas } from "./datas";
@@ -94,7 +95,7 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
   };
 
   return (
-    <div className="w-[95%] mx-auto py-10 md:py-16 lg:py-20 px-4 md:px-0 grid text-center items-center rounded-[30px] border border-[rgba(239,239,243,0.5)] bg-white/30 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">
+    <div className="w-[95%] mx-auto py-10 md:py-16 lg:py-20 px-4 md:px-0 grid text-center items-center rounded-[30px] border border-[rgba(239,239,243,0.5)] bg-white/30 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)]">
       <Datas lang={lang} />
 
       <div className="grid gap-6 md:gap-10 pt-6 md:pt-10 px-4 md:px-[30px]">
@@ -117,6 +118,7 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
                 width={640}
                 height={530}
                 className="max-h-[300px] w-auto mx-auto"
+                loading="lazy"
               />
             </div>
           ))}
@@ -167,6 +169,7 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
                   width={640}
                   height={530}
                   className="max-h-[400px] w-auto mx-auto"
+                  loading="lazy"
                 />
               </div>
             ))}

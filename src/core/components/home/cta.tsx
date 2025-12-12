@@ -1,4 +1,5 @@
 import { getI18n } from "@/core/i18n";
+
 import { PropsWithLang } from "@/core/types/app.types";
 
 export const CTA: React.FC<PropsWithLang> = ({ lang }) => {
@@ -10,7 +11,7 @@ export const CTA: React.FC<PropsWithLang> = ({ lang }) => {
 
   return (
     <div
-      className="w-[95%] mx-auto min-h-[400px] md:min-h-[500px] lg:h-[600px] px-4 md:px-8 grid text-center items-center rounded-[30px] backdrop-blur-[20px] bg-white/20 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] py-12 md:py-16 lg:py-0"
+      className="w-[95%] mx-auto min-h-[400px] md:min-h-[500px] lg:h-[600px] px-4 md:px-8 grid text-center items-center rounded-[30px] bg-white/20 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] py-12 md:py-16 lg:py-0"
       style={{
         backgroundImage: "url(/images/bg-cta.svg)",
         backgroundSize: "cover",
