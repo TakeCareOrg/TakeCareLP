@@ -78,7 +78,7 @@ export const Vision: React.FC<PropsWithLang> = ({ lang }) => {
   return (
     <div
       ref={sectionRef}
-      className="w-[95%] h-screen mx-auto pt-10 px-4 md:px-0 grid text-center items-center rounded-[30px] bg-white/30 border border-[rgba(239,239,243,0.5)] shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]"
+      className="w-[95%] h-screen mx-auto pt-10 px-4 md:px-0 grid text-center items-center rounded-[30px] bg-white/30 border border-[rgba(239,239,243,0.5)] shadow-[0_4px_24px_0_rgba(0,0,0,0.2)]"
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-[clamp(3rem,7vw,6rem)] font-extrabold leading-[1.15] tracking-tight">

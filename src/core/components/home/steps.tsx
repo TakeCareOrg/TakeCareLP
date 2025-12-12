@@ -95,7 +95,7 @@ export const Steps: React.FC<PropsWithLang> = ({ lang }) => {
   };
 
   return (
-    <div className="w-[95%] mx-auto py-10 md:py-16 lg:py-20 px-4 md:px-0 grid text-center items-center rounded-[30px] border border-[rgba(239,239,243,0.5)] bg-white/30 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] backdrop-blur-[20px]">
+    <div className="w-[95%] mx-auto py-10 md:py-16 lg:py-20 px-4 md:px-0 grid text-center items-center rounded-[30px] border border-[rgba(239,239,243,0.5)] bg-white/30 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)]">
       <Datas lang={lang} />
 
       <div className="grid gap-6 md:gap-10 pt-6 md:pt-10 px-4 md:px-[30px]">

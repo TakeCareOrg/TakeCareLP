@@ -12,7 +12,7 @@ export const LangSelect: React.FC<PropsWithLang> = ({ lang }) => {
     <div className="relative w-full md:w-auto">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors w-full md:w-auto relative z-[60]"
+        className="flex items-center justify-between gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors w-full md:w-auto relative z-60"
       >
         {AvailableLangs.find((l) => l.code === lang)?.name}
         <svg
@@ -26,7 +26,7 @@ export const LangSelect: React.FC<PropsWithLang> = ({ lang }) => {
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 md:right-0 md:left-auto mt-2 py-2 w-full md:w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-[60]">
+        <div className="absolute left-0 md:right-0 md:left-auto mt-2 py-2 w-full md:w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-60">
           {AvailableLangs.map(({ code, name }) => (
             <button
               key={code}

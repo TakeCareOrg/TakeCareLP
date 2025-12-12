@@ -143,7 +143,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
 
         <Image
           src="/images/illustrations.png"
-          alt="hero - testimonies illustrations"
+          alt="hero - testimonies illustration"
           width={450}
           height={450}
           className="w-full max-w-[800px] h-auto mx-auto lg:mr-0"

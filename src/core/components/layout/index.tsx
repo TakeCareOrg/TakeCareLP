@@ -48,10 +48,10 @@ const AnimatedBackground = () => {
         vy: startPos.vy * (1 + Math.random() * 0.5),
         color:
           i === 0
-            ? "#68DCE2" // cyan
+            ? "#3DD8E2" // cyan
             : i === 1
-            ? "#8F97DB" // purple
-            : "#DA8FDB", // violet-blue
+            ? "#7A88ED" // purple
+            : "#E272ED", // violet-blue
       });
     }
 
@@ -100,12 +100,12 @@ const AnimatedBackground = () => {
           blob.y,
           blob.radius
         );
-        // Couleur plus intense au centre (50% d'opacité)
-        gradient.addColorStop(0, blob.color + "80");
+        // Couleur au centre (60% d'opacité)
+        gradient.addColorStop(0, blob.color + "99");
         // Transition douce
-        gradient.addColorStop(0.6, blob.color + "40");
-        // Plus transparent sur les bords (20% d'opacité)
-        gradient.addColorStop(1, blob.color + "30");
+        gradient.addColorStop(0.6, blob.color + "4D");
+        // Plus transparent sur les bords (27% d'opacité)
+        gradient.addColorStop(1, blob.color + "45");
 
         ctx.fillStyle = gradient;
         ctx.beginPath();

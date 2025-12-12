@@ -137,7 +137,7 @@ export const Chat: React.FC<PropsWithLang> = ({ lang }) => {
   return (
     <div
       ref={sectionRef}
-      className="w-[95%] mx-auto pt-10 px-4 md:px-0 grid text-center items-center backdrop-blur-[20px]"
+      className="w-[95%] mx-auto pt-10 px-4 md:px-0 grid text-center items-center"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 p-4 md:p-8 lg:p-12">
         {/* -------- LEFT SIDE : STATS -------- */}
