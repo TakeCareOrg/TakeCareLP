@@ -99,11 +99,11 @@ export const Vision: React.FC<PropsWithLang> = ({ lang }) => {
                       {word === line.coloredWord ? (
                         <span className="relative inline-block">
                           {/* Effet de glow/blur */}
-                          <span className="absolute inset-0 bg-gradient-to-r from-[#00C8FF] via-[#B300FF] to-[#FF0073] bg-clip-text text-transparent blur-[25px] opacity-70">
+                          <span className="absolute inset-0 bg-linear-to-r from-[#00C8FF] via-[#B300FF] to-[#FF0073] bg-clip-text text-transparent blur-[25px] opacity-70">
                             {word}
                           </span>
                           {/* Texte principal coloré */}
-                          <span className="relative bg-gradient-to-r from-[#00C8FF] via-[#B300FF] to-[#FF0073] bg-clip-text text-transparent font-extrabold">
+                          <span className="relative bg-linear-to-r from-[#00C8FF] via-[#B300FF] to-[#FF0073] bg-clip-text text-transparent font-extrabold">
                             {word}
                           </span>
                         </span>
