@@ -55,9 +55,9 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
   };
 
   return (
-    <div className="w-[95%] h-screen mx-auto pt-5 px-4 md:px-0 grid items-center gap-6 md:gap-4">
+    <div className="w-[95%] h-[calc(100vh-60px)] mx-auto pt-5 px-4 md:px-0 grid items-center gap-4 md:gap-3">
       {/* Top Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] justify-between gap-6 lg:gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] justify-between gap-4 lg:gap-6">
         <div className="grid gap-3">
           <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-[26px]">
             {t.pretitle}
@@ -87,7 +87,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-black font-bold text-white w-full sm:w-40 h-10 rounded-[10px] hover:bg-black/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-black font-bold mx-auto sm:mx-0 text-white w-fit px-2 h-10 rounded-[10px] hover:bg-black/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "..." : t.form.button}
             </button>
@@ -118,9 +118,9 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
       </div>
 
       {/* Bottom Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] justify-between gap-8 lg:gap-0">
-        <div className="flex flex-col h-full justify-between gap-6 lg:gap-0">
-          <div className="grid gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] justify-between gap-6 lg:gap-0">
+        <div className="flex flex-col h-full justify-between gap-4 lg:gap-0">
+          <div className="grid gap-2">
             <Image
               src="/images/avatars.png"
               alt="avatars"
@@ -134,7 +134,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
             </p>
           </div>
           <button className="bg-black rounded-[50px] px-5 py-2.5 w-fit flex items-center mx-auto lg:mx-0 hover:bg-black/90 transition-colors">
-            <PlayArrowIcon className="inline-block mr-2 fill-white size-[30px] -ml-2" />
+            <PlayArrowIcon className="inline-block mr-2 fill-white size-[30px] -ml-2 rotate-90 " />
             <p className="text-white font-semibold text-sm sm:text-base">
               {t.button}
             </p>
@@ -146,7 +146,7 @@ export const Hero: React.FC<PropsWithLang> = ({ lang }) => {
           alt="hero - testimonies illustration"
           width={450}
           height={450}
-          className="w-full max-w-[800px] h-auto mx-auto lg:mr-0"
+          className="w-full max-w-[700px] h-auto mx-auto lg:mr-0"
           loading="lazy"
         />
       </div>
