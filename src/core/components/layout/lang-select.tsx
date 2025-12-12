@@ -34,7 +34,7 @@ export const LangSelect: React.FC<PropsWithLang> = ({ lang }) => {
                 setLang(code);
                 setIsOpen(false);
               }}
-              className={`w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors ${
+              className={`w-full text-left text-[14px] px-4 py-2 hover:bg-gray-100 transition-colors ${
                 lang === code ? "text-blue-600 font-semibold" : ""
               }`}
             >
